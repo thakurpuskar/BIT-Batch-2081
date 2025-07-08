@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BIT BATCH 2081</title>
+    <link rel="icon" href="./assets/Logo.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav x-data="{ open: false }" class="bg-white shadow-lg px-6 py-4">
+        <div class="flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3">
+                <img src="./assets/Logo.png" alt="BIT 2081 Logo" class="h-14 w-14 rounded-full object-cover">
+                <h1 class="text-2xl font-extrabold text-gray-700 tracking-wide">
+                    BIT BATCH 2081
+                </h1>
+            </a>
+
+            <button @click="open = !open" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu">
+                <svg x-show="!open" class="w-7 h-7 transition-all" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg x-show="open" x-cloak class="w-7 h-7 transition-all" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div class="hidden md:flex gap-6 items-center">
+                <a href="./index.html"
+                    class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Home</a>
+                <a href="batchmates.html"
+                    class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Batchmates</a>
+                <a href="./teachers.html"
+                    class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Teachers</a>
+                <a href="./gallery.html"
+                    class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Gallery</a>
+            </div>
+        </div>
+
+        <div x-show="open" x-cloak x-transition.duration.300ms class="md:hidden mt-4 space-y-3 text-center">
+            <a href="./index.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Home</a>
+            <a href="batchmates.html"
+                class="block text-lg font-medium text-gray-700 hover:text-purple-900">Batchmates</a>
+            <a href="./teachers.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Teachers</a>
+            <a href="./gallery.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Gallery</a>
+        </div>
+    </nav>
+
+    <section class="bg-gray-50 py-12 px-6 min-h-screen">
+        <h2 class="text-3xl font-bold text-center text-gray-700 mb-10">📚 BIT 2081 - Semester Wise Subjects</h2>
+
+        <div class="max-w-3xl mx-auto space-y-6">
+
+            <div x-data="{ open: false }" class="bg-white rounded-xl shadow-md overflow-hidden">
+                <button @click="open = !open"
+                    class="w-full flex justify-between items-center px-6 py-4 bg-purple-600 text-white font-semibold text-lg focus:outline-none">
+                    1st Semester
+                    <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div x-show="open" x-collapse class="px-6 py-4 space-y-2 text-gray-700 bg-gray-50">
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Basic Mathematics</li>
+                        <li>Introduction to Information Technology</li>
+                        <li>C Programming</li>
+                        <li>Digital Logic</li>
+                        <li>Sociology</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div x-data="{ open: false }" class="bg-white rounded-xl shadow-md overflow-hidden">
+                <button @click="open = !open"
+                    class="w-full flex justify-between items-center px-6 py-4 bg-purple-600 text-white font-semibold text-lg focus:outline-none">
+                    2nd Semester
+                    <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div x-show="open" x-collapse class="px-6 py-4 space-y-2 text-gray-700 bg-gray-50">
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Object Oriented Programming</li>
+                        <li>Microprocessor and Computer Architecture</li>
+                        <li>Discrete Structure</li>
+                        <li>Basic Statistics</li>
+                        <li>Economics</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 text-sm py-10 px-6 mt-10">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+            <div>
+                <h4 class="font-bold text-white mb-2 text-lg"><i class="fas fa-bullhorn mr-2"></i>Our Voice</h4>
+
+                <p class="text-gray-100 leading-relaxed">
+                    <i class="fas fa-quote-left text-yellow-300 mr-2"></i>
+                    We know our team, our goals, our knowledge, our course, and our college — and we’re focused on
+                    building a
+                    better, stronger team together.
+                    <i class="fas fa-quote-right text-yellow-300 ml-2"></i>
+                </p>
+
+                <p class="mt-3 text-green-400 font-medium"><i class="fas fa-users mr-2"></i>Created by BIT Batch 2081
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white mb-2">Quick Links</h4>
+                <ul class="space-y-2 text-white">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 12l9-9 9 9h-3v9h-12v-9h-3z" />
+                        </svg>
+                        <a href="./index.html" class="hover:underline">Home</a>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17 20h5v2h-20v-2h5v-2h10v2zm0-12h5v2h-5v-2zm0 4h5v2h-5v-2zm0 4h5v2h-5v-2zm-6 0h4v2h-4v-2zm-6-8h5v2h-5v-2zm0 4h5v2h-5v-2zm0 4h5v2h-5v-2z" />
+                        </svg>
+                        <a href="./batchmates.html" class="hover:underline">Batchmates</a>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 6h16v2h-16v-2zm0 5h16v2h-16v-2zm0 5h16v2h-16v-2z" />
+                        </svg>
+                        <a href="./semesters.html" class="hover:underline">Semesters</a>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-3.31 0-6 2.69-6 6v2h12v-2c0-3.31-2.69-6-6-6z" />
+                        </svg>
+                        <a href="./teachers.html" class="hover:underline">Teachers</a>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 5h16v14h-16v-14zm2 2v10h12v-10h-12zm6 1.5l4 2.5-4 2.5-4-2.5 4-2.5z" />
+                        </svg>
+                        <a href="./gallery.html" class="hover:underline">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div>
+                <h4 class="font-bold text-white mb-2">Ideas About</h4>
+                <ul class="space-y-2 text-white">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v13h8v-6h4v6h8V7z" />
+                        </svg>
+                        <a href="https://cct.tu.edu.np/" class="hover:underline" target="_blank" rel="noopener">Our
+                            College</a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 2H5a2 2 0 00-2 2v16l7-3 7 3V4a2 2 0 00-2-2z" />
+                        </svg>
+                        <a href="https://bitinfonepal.com/" class="hover:underline" target="_blank" rel="noopener">Our
+                            Courses</a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 3h18v2H3V3zm0 4h18v2H3V7zm0 4h18v10H3V11z" />
+                        </svg>
+                        <a href="https://www.facebook.com/IT.Alliance.CCT" class="hover:underline" target="_blank"
+                            rel="noopener">Our Organization</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white mb-2">Contacts</h4>
+                <ul class="space-y-2 text-gray-300 text-sm">
+
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 6.75v1.5a3 3 0 003 3h.75a2.25 2.25 0 012.25 2.25v.75a3 3 0 003 3h1.5a2.25 2.25 0 002.25-2.25v-.75a3 3 0 003-3v-1.5a2.25 2.25 0 00-2.25-2.25h-.75a3 3 0 00-3 3v.75a2.25 2.25 0 01-2.25 2.25h-.75a3 3 0 01-3-3v-1.5a2.25 2.25 0 00-2.25-2.25H5.25A3 3 0 002.25 6.75z" />
+                        </svg>
+                        <a href="tel:9779767715499" class="hover:underline">Phone</a>
+                    </li>
+
+
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75M21.75 6.75a2.25 2.25 0 00-2.25-2.25H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0L12 13.5 2.25 6.75" />
+                        </svg>
+                        <a href="mailto:puskarkumarthakur@email.com" class="hover:underline">Gmail</a>
+                    </li>
+
+
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M20.52 3.48A11.9 11.9 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.18 1.6 6.01L0 24l6.29-1.64A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zm-8.46 17.52a9.42 9.42 0 01-4.81-1.31l-.35-.21-3.73.97.99-3.64-.23-.37a9.37 9.37 0 01-1.43-5A9.44 9.44 0 0112 2.55c2.52 0 4.88.98 6.67 2.76a9.43 9.43 0 012.77 6.66c0 5.22-4.23 9.45-9.45 9.45zm5.42-7.07c-.3-.15-1.76-.87-2.03-.97s-.47-.15-.66.15-.76.97-.93 1.17-.34.22-.64.07a7.61 7.61 0 01-2.23-1.37 8.43 8.43 0 01-1.55-1.93c-.16-.26-.02-.4.12-.55.12-.12.26-.3.4-.45.13-.15.17-.26.26-.45.08-.15.04-.34-.02-.48-.07-.15-.66-1.59-.9-2.18-.24-.58-.48-.5-.66-.51h-.56c-.19 0-.5.07-.76.34a3.18 3.18 0 00-1 2.38 5.58 5.58 0 001.18 3.1c.15.22 2.2 3.34 5.32 4.7 3.11 1.35 3.11.9 3.67.85.56-.06 1.76-.71 2.01-1.4.25-.69.25-1.28.18-1.4-.06-.12-.27-.19-.56-.33z" />
+                        </svg>
+                        <a href="https://wa.me/9779767715499" target="_blank" rel="noopener"
+                            class="hover:underline">WhatsApp</a>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22.675 0h-21.35C.596 0 0 .597 0 1.333v21.334C0 23.403.596 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.404 24 24 23.403 24 22.667V1.333C24 .597 23.404 0 22.675 0z" />
+                        </svg>
+                        <a href="https://www.facebook.com/puskar.kumar.thakur" target="_blank" rel="noopener"
+                            class="hover:underline">Facebook</a>
+                    </li>
+
+
+                    <li class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 32 32">
+                            <path
+                                d="M16 0C7.167 0 0 6.682 0 14.927c0 4.59 2.39 8.678 6.13 11.38v5.274l5.616-3.082c1.325.372 2.733.573 4.254.573 8.833 0 16-6.682 16-14.927C32 6.682 24.833 0 16 0zm1.15 17.764l-4.08-4.364-7.337 4.364 7.965-8.51 4.118 4.264 7.287-4.264-7.953 8.51z" />
+                        </svg>
+                        <a href="https://m.me/puskar.kumar.thakur" target="_blank" rel="noopener"
+                            class="hover:underline">Messenger</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <p class="text-center text-sm mt-10 text-purple-700 font-medium tracking-wide">
+            Made with
+            <span class="inline-block animate-pulse text-red-500 mx-1">❤️</span>
+            by
+            <a href="./index.html"
+                class="text-purple-900 hover:underline hover:text-purple-600 transition-colors font-semibold">
+                BIT Batch 2081
+            </a>.
+            <span class="block sm:inline text-gray-500 mt-1 sm:mt-0">© 2025 All rights reserved.</span>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

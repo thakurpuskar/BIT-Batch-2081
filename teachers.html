@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BIT BATCH 2081</title>
-  <link rel="icon" href="./Screenshot 2025-07-04 140752.png" type="image/png">
+  <link rel="icon" href="./assets/Logo.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -29,7 +29,7 @@
           category: "Quantitative & Social Studies",
           bio: "Expert in Mathematics with 20+ years of teaching experience.",
           facebook: "https://www.facebook.com/balbhadra.bhandari",
-          image: "balbadhur.jpg"
+          image: "assets/teachers/balbadhur.jpg"
         },
         {
           name: "Mahesh Kumar Shah",
@@ -37,7 +37,7 @@
           category: "Programming & IT Fundamentals",
           bio: "Expert in Coding with 19+ years of teaching experience.",
           facebook: "https://www.facebook.com/mahesh.shah.1460",
-          image: "mahesh.jpg"
+          image: "assets/teachers/mahesh.jpg"
         },
         {
           name: "Bikash Soni",
@@ -45,7 +45,7 @@
           category: "Programming & IT Fundamentals",
           bio: "Expert in Information technology with 15+ years of teaching experience.",
           facebook: "https://www.facebook.com/bikash.so",
-          image: "bikash.png"
+          image: "assets/teachers/bikash.png"
         },
         {
           name: "Dharti Raj Shah",
@@ -53,7 +53,7 @@
           category: "Systems & Architecture",
           bio: "Expert in electronic & LOgic with 17+ years of teaching experience.",
           facebook: "https://www.facebook.com/dhartiraj",
-          image: "Dhartiraj.jpg"
+          image: "assets/teachers/Dhartiraj.jpg"
         },
         {
           name: "Bishal Shrestha",
@@ -61,7 +61,7 @@
           category: "Quantitative & Social Studies",
           bio: "Expert in social structure & nature with 15+ years of teaching experience.",
           facebook: "https://www.facebook.com/bishal.shrestha.265942",
-          image: "bishal shrestha.jpg"
+          image: "assets/teachers/bishal shrestha.jpg"
         },
         {
           name: "Roma Ghimire",
@@ -69,7 +69,7 @@
           category: "Quantitative & Social Studies",
           bio: "Expert in Statistics with 15+ years of teaching experience.",
           facebook: "https://www.facebook.com/roma.ghimire.7",
-          image: "Roma.jpg"
+          image: "assets/teachers/Roma.jpg"
         },
         {
           name: "Nar Bahadur Tamang",
@@ -77,7 +77,7 @@
           category: "Systems & Architecture",
           bio: "Expert in Systems and structure with 14+ years of teaching experience.",
           facebook: "https://www.facebook.com/rnaren.nbt#",
-          image: "nar bahadur.jpg"
+          image: "assets/teachers/nar bahadur.jpg"
         },
         {
           name: "Surendra Ghimire",
@@ -85,7 +85,7 @@
           category: "Quantitative & Social Studies",
           bio: "Expert in economic & quantitative with 12+ years of teaching experience.",
           facebook: "https://www.facebook.com/surendra.ghimire.908",
-          image: "surendra.jpg"
+          image: "assets/teachers/surendra.jpg"
         },
       ],
       get filteredTeachers() {
@@ -109,14 +109,13 @@
   <nav x-data="{ open: false }" class="bg-white shadow-lg px-6 py-4">
     <div class="flex justify-between items-center">
       <a href="/" class="flex items-center gap-3">
-        <img src="./Screenshot 2025-07-04 140752.png" alt="BIT 2081 Logo"
-          class="h-14 w-14 rounded-full object-cover border-2 border-purple-600 shadow-md">
-        <h1 class="text-2xl font-extrabold text-purple-700 tracking-wide hover:text-purple-900 transition-colors">
+        <img src="./assets/Logo.png" alt="BIT 2081 Logo" class="h-14 w-14 rounded-full object-cover">
+        <h1 class="text-2xl font-extrabold text-gray-700 tracking-wide">
           BIT BATCH 2081
         </h1>
       </a>
 
-      <button @click="open = !open" class="md:hidden text-purple-700 focus:outline-none" aria-label="Toggle menu">
+      <button @click="open = !open" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu">
         <svg x-show="!open" class="w-7 h-7 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -126,28 +125,25 @@
       </button>
 
       <div class="hidden md:flex gap-6 items-center">
-        <a href="./index.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">🏠 Home</a>
-        <a href="batchmates.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">👥
-          Batchmates</a>
-        <a href="./teachers.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">👨‍🏫
-          Teachers</a>
-        <a href="./gallery.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">🖼️
-          Gallery</a>
+        <a href="./index.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Home</a>
+        <a href="batchmates.html"
+          class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Batchmates</a>
+        <a href="./teachers.html"
+          class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Teachers</a>
+        <a href="./gallery.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Gallery</a>
       </div>
     </div>
 
     <div x-show="open" x-cloak x-transition.duration.300ms class="md:hidden mt-4 space-y-3 text-center">
-      <a href="./index.html" class="block text-lg font-medium text-purple-700 hover:text-purple-900">🏠 Home</a>
-      <a href="batchmates.html" class="block text-lg font-medium text-purple-700 hover:text-purple-900">👥
-        Batchmates</a>
-      <a href="./teachers.html" class="block text-lg font-medium text-purple-700 hover:text-purple-900">👨‍🏫
-        Teachers</a>
-      <a href="./gallery.html" class="block text-lg font-medium text-purple-700 hover:text-purple-900">🖼️ Gallery</a>
+      <a href="./index.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Home</a>
+      <a href="batchmates.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Batchmates</a>
+      <a href="./teachers.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Teachers</a>
+      <a href="./gallery.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Gallery</a>
     </div>
   </nav>
 
   <section x-data="teacherDirectory()" class="bg-gray-50 py-12 px-4">
-    <h3 class="text-2xl font-bold text-center text-purple-700 mb-6">🎓 Meet Our Teachers</h3>
+    <h3 class="text-2xl font-bold text-center text-gray-700 mb-6">🎓 Meet Our Teachers</h3>
 
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 max-w-4xl mx-auto">
       <input type="text" x-model="search" placeholder="Search by name or subject..."
@@ -248,7 +244,7 @@
             <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M4 6h16v2h-16v-2zm0 5h16v2h-16v-2zm0 5h16v2h-16v-2z" />
             </svg>
-            <a href="#" class="hover:underline">Semesters</a>
+            <a href="./semesters.html" class="hover:underline">Semesters</a>
           </li>
 
           <li class="flex items-center gap-2">

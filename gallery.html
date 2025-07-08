@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BIT BATCH 2081</title>
-  <link rel="icon" href="./Screenshot 2025-07-04 140752.png" type="image/png">
+  <link rel="icon" href="./assets/Logo.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
 
@@ -21,7 +22,7 @@
       init() {
         this.images = [
           {
-            src: '2nd vs 7th sem Basketball.jpg',
+            src: 'assets/gallery/2nd vs 7th sem Basketball.jpg',
             alt: '2nd vs 7th sem Basketball Match',
             caption: '2nd vs 7th sem Basketball Match',
             type: 'sports',
@@ -30,7 +31,7 @@
           },
 
           {
-            src: 'Coder Hustle 1.0.jpeg',
+            src: 'assets/gallery/Coder Hustle 1.0.jpeg',
             alt: 'Coder Hustle 1.0',
             caption: 'Coder Hustle 1.0',
             type: 'event',
@@ -38,7 +39,7 @@
           },
 
           {
-            src: 'Farewell Program.jpg',
+            src: 'assets/gallery/Farewell Program.jpg',
             alt: 'Farewell Program',
             caption: 'Farewell Program',
             type: 'program',
@@ -47,42 +48,42 @@
           },
 
           {
-            src: './Shivajatha hiking.jpg',
+            src: 'assets/gallery/Shivajatha hiking.jpg',
             alt: 'Shiva jatta Hiking',
             caption: 'Shiva jatta Hiking',
             type: 'hiking',
             tooltip: 'Adventure to Shiva jatha Dada',
           },
           {
-            src: './Youth it mou signing.jpg',
+            src: 'assets/gallery/Youth it mou signing.jpg',
             alt: 'Youth IT MOU Signing',
             caption: 'Youth IT MOU Signing',
             type: 'event',
             tooltip: 'Official IT MoU event',
           },
           {
-            src: './library program.jpg',
+            src: 'assets/gallery/library program.jpg',
             alt: 'E-library Resources Program',
             caption: 'E-library Resources Program',
             type: 'program',
             tooltip: 'Knowledge sharing in E-library',
           },
           {
-            src: 'Danabari hiking.jpg',
+            src: 'assets/gallery/Danabari hiking.jpg',
             alt: 'Danabari Hiking',
             caption: 'Danabari Hiking',
             type: 'hiking',
             tooltip: 'Adventure to Danabari Dada',
           },
           {
-            src: 'chindra dada hiking.jpg',
+            src: 'assets/gallery/chindra dada hiking.jpg',
             alt: 'Chinde dada Hiking',
             caption: 'Chinde dada Hiking',
             type: 'hiking',
             tooltip: 'Adventure to Chinde Dada',
           },
           {
-            src: 'girls awarness program.jpg',
+            src: 'assets/gallery/girls awarness program.jpg',
             alt: 'Women Empowerment Program',
             caption: 'Women Empowerment Program',
             type: 'program',
@@ -120,7 +121,6 @@
     }
   }
 
-  // Simple tooltip directive
   document.addEventListener('alpine:init', () => {
     Alpine.directive('tooltip', (el, { expression }, { evaluate }) => {
       el.setAttribute('title', evaluate(expression));
@@ -130,19 +130,16 @@
 
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
   <nav x-data="{ open: false }" class="bg-white shadow-lg px-6 py-4">
     <div class="flex justify-between items-center">
       <a href="/" class="flex items-center gap-3">
-        <img src="./Screenshot 2025-07-04 140752.png" alt="BIT 2081 Logo"
-          class="h-14 w-14 rounded-full object-cover border-2 border-purple-600 shadow-md">
-        <h1 class="text-2xl font-extrabold text-purple-700 tracking-wide hover:text-purple-900 transition-colors">
+        <img src="./assets/Logo.png" alt="BIT 2081 Logo" class="h-14 w-14 rounded-full object-cover">
+        <h1 class="text-2xl font-extrabold text-gray-700 tracking-wide">
           BIT BATCH 2081
         </h1>
       </a>
 
-      <button @click="open = !open" class="md:hidden text-purple-700 focus:outline-none" aria-label="Toggle menu">
+      <button @click="open = !open" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu">
         <svg x-show="!open" class="w-7 h-7 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -152,28 +149,25 @@
       </button>
 
       <div class="hidden md:flex gap-6 items-center">
-        <a href="./index.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">🏠 Home</a>
-        <a href="batchmates.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">👥
-          Batchmates</a>
-        <a href="./teachers.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">👨‍🏫
-          Teachers</a>
-        <a href="./gallery.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">🖼️
-          Gallery</a>
+        <a href="./index.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Home</a>
+        <a href="batchmates.html"
+          class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Batchmates</a>
+        <a href="./teachers.html"
+          class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Teachers</a>
+        <a href="./gallery.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Gallery</a>
       </div>
     </div>
 
     <div x-show="open" x-cloak x-transition.duration.300ms class="md:hidden mt-4 space-y-3 text-center">
-      <a href="./index.html" class="block text-lg font-medium text-purple-700 hover:text-purple-900">🏠 Home</a>
-      <a href="batchmates.html" class="block text-lg font-medium text-purple-700 hover:text-purple-900">👥
-        Batchmates</a>
-      <a href="./teachers.html" class="block text-lg font-medium text-purple-700 hover:text-purple-900">👨‍🏫
-        Teachers</a>
-      <a href="./gallery.html" class="block text-lg font-medium text-purple-700 hover:text-purple-900">🖼️ Gallery</a>
+      <a href="./index.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Home</a>
+      <a href="batchmates.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Batchmates</a>
+      <a href="./teachers.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Teachers</a>
+      <a href="./gallery.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Gallery</a>
     </div>
   </nav>
 
   <section x-data="gallery()" x-init="init()" class="bg-gray-50 py-12 px-4">
-    <h3 class="text-2xl font-bold text-center text-purple-700 mb-8">🎞️ Our Gallery</h3>
+    <h3 class="text-2xl font-bold text-center text-gray-700 mb-8">🎞️ Our Gallery</h3>
 
     <div class="flex justify-center gap-4 mb-10 flex-wrap">
       <template x-for="cat in categories" :key="cat">
@@ -265,7 +259,7 @@
             <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M4 6h16v2h-16v-2zm0 5h16v2h-16v-2zm0 5h16v2h-16v-2z" />
             </svg>
-            <a href="#" class="hover:underline">Semesters</a>
+            <a href="./semesters.html" class="hover:underline">Semesters</a>
           </li>
 
           <li class="flex items-center gap-2">
