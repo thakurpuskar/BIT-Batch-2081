@@ -12,7 +12,7 @@
 
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-  <nav x-data="{ open: false }" class="bg-white shadow-lg px-6 py-4">
+  <nav x-data="{ open: false, loggedIn: false }" class="bg-white shadow-md sticky top-0 z-50 px-6 py-4">
     <div class="flex justify-between items-center">
       <a href="./index.html" class="flex items-center gap-3">
         <img src="./assets/Logo.png" alt="BIT 2081 Logo" class="h-14 w-14 rounded-full object-cover">
@@ -20,6 +20,7 @@
           BIT BATCH 2081
         </h1>
       </a>
+
       <button @click="open = !open" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle menu">
         <svg x-show="!open" class="w-7 h-7 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -28,22 +29,54 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
-      <div class="hidden md:flex gap-6 items-center">
+
+      <div class="hidden md:flex gap-8 items-center">
         <a href="./index.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Home</a>
-        <a href="batchmates.html"
+        <a href="./batchmates.html"
           class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Batchmates</a>
         <a href="./teachers.html"
           class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Teachers</a>
         <a href="./gallery.html" class="text-lg font-medium text-gray-700 hover:text-purple-600 transition">Gallery</a>
+
+        <template x-if="!loggedIn">
+          <a href="./loginpage.html"
+            class="ml-4 px-4 py-2 text-sm bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition shadow">
+            Login
+          </a>
+        </template>
+        <template x-if="loggedIn">
+          <button @click="loggedIn = false"
+            class="ml-4 px-4 py-2 text-sm bg-red-500 text-white rounded-xl hover:bg-red-600 transition shadow">
+            Logout
+          </button>
+        </template>
       </div>
     </div>
-    <div x-show="open" x-cloak x-transition.duration.300ms class="md:hidden mt-4 space-y-3 text-center">
-      <a href="./index.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Home</a>
-      <a href="batchmates.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Batchmates</a>
-      <a href="./teachers.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Teachers</a>
-      <a href="./gallery.html" class="block text-lg font-medium text-gray-700 hover:text-purple-900">Gallery</a>
+
+    <div x-show="open" x-cloak x-transition.duration.300ms class="md:hidden mt-4 space-y-2 text-center">
+      <a href="./index.html" class="block text-lg font-medium text-gray-700 hover:text-purple-700 transition">Home</a>
+      <a href="./batchmates.html"
+        class="block text-lg font-medium text-gray-700 hover:text-purple-700 transition">Batchmates</a>
+      <a href="./teachers.html"
+        class="block text-lg font-medium text-gray-700 hover:text-purple-700 transition">Teachers</a>
+      <a href="./gallery.html"
+        class="block text-lg font-medium text-gray-700 hover:text-purple-700 transition">Gallery</a>
+
+      <template x-if="!loggedIn">
+        <a href="./loginpage.html"
+          class="block px-4 py-2 mt-2 mx-auto w-fit text-sm bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition shadow">
+          Login
+        </a>
+      </template>
+      <template x-if="loggedIn">
+        <button @click="loggedIn = false"
+          class="block px-4 py-2 mt-2 mx-auto w-fit text-sm bg-red-500 text-white rounded-xl hover:bg-red-600 transition shadow">
+          Logout
+        </button>
+      </template>
     </div>
   </nav>
+
 
   <section class="w-full bg-gray-50 py-6 pt-0">
     <div class="w-full h-[300px] md:h-[800px] overflow-hidden group">

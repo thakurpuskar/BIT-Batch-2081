@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BIT Batch 2081 | Login</title>
+    <link rel="icon" href="./assets/Logo.png" type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7C3AED',
+                        softGray: '#E5E7EB',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body
+    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-200 to-purple-200 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900 relative overflow-hidden px-4">
+
+    <div
+        class="absolute inset-0 bg-[url('assets/gallery/Farewell%20Program.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay">
+    </div>
+
+    <div
+        class="relative bg-white dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-90 rounded-3xl shadow-xl max-w-md w-full p-8 space-y-6 z-10">
+        <div class="flex justify-center mb-4">
+            <img src="./assets/Logo.png" alt="Logo"
+                class="h-16 w-16 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" />
+        </div>
+        <h2 class="text-center text-2xl md:text-3xl font-extrabold text-gray-800 dark:text-white mb-6">
+            Welcome to BIT Batch 2081
+        </h2>
+
+        <div class="flex justify-center mb-6 space-x-4">
+            <button id="showLogin"
+                class="tab-btn px-4 md:px-5 py-2 rounded-xl bg-primary text-white hover:scale-105 transition-transform"
+                type="button">
+                Login
+            </button>
+            <button id="showSignUp"
+                class="tab-btn px-4 md:px-5 py-2 rounded-xl bg-gray-300 text-gray-800 hover:scale-105 transition-transform dark:bg-gray-700 dark:text-white"
+                type="button">
+                Sign Up
+            </button>
+        </div>
+
+        <form id="loginForm" class="space-y-4 transition-all duration-300" novalidate autocomplete="off">
+            <div>
+                <input type="text" name="username" id="loginUsername" placeholder="Username" autocomplete="username"
+                    class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-primary focus:outline-none dark:bg-gray-700 dark:text-white"
+                    required />
+                <p class="mt-1 text-sm text-red-600 hidden" id="loginUsernameError" aria-live="polite">
+                    Username is required.
+                </p>
+            </div>
+            <div class="relative">
+                <input type="password" id="loginPassword" name="password" placeholder="Password"
+                    autocomplete="current-password"
+                    class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-primary focus:outline-none dark:bg-gray-700 dark:text-white"
+                    required />
+                <button type="button" aria-label="Toggle password visibility"
+                    class="absolute top-2.5 right-3 text-xl text-gray-600 dark:text-white focus:outline-none"
+                    toggle="#loginPassword">
+                    👁️
+                </button>
+                <p class="mt-1 text-sm text-red-600 hidden" id="loginPasswordError" aria-live="polite">
+                    Password is required.
+                </p>
+            </div>
+            <a href="./index.html"
+                class="block w-full text-center bg-primary text-white py-2 rounded-xl hover:bg-purple-700 transition">
+                Login
+            </a>
+            <!-- <button type="submit" class="w-full bg-primary text-white py-2 rounded-xl hover:bg-purple-700 transition">
+                Login
+            </button> -->
+        </form>
+
+        <form id="signUpForm" class="space-y-4 hidden transition-all duration-300" novalidate autocomplete="off">
+            <div>
+                <input type="text" name="fullname" id="signUpFullname" placeholder="Full Name" autocomplete="name"
+                    class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-primary focus:outline-none dark:bg-gray-700 dark:text-white"
+                    required />
+                <p class="mt-1 text-sm text-red-600 hidden" id="signUpFullnameError" aria-live="polite">
+                    Full name is required.
+                </p>
+            </div>
+            <div>
+                <input type="email" name="email" id="signUpEmail" placeholder="Email" autocomplete="email"
+                    class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-primary focus:outline-none dark:bg-gray-700 dark:text-white"
+                    required />
+                <p class="mt-1 text-sm text-red-600 hidden" id="signUpEmailError" aria-live="polite">
+                    Valid email is required.
+                </p>
+            </div>
+            <div class="relative">
+                <input type="password" id="signUpPassword" name="password" placeholder="Password"
+                    autocomplete="new-password"
+                    class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-primary focus:outline-none dark:bg-gray-700 dark:text-white"
+                    required minlength="6" />
+                <button type="button" aria-label="Toggle password visibility"
+                    class="absolute top-2.5 right-3 text-xl text-gray-600 dark:text-white focus:outline-none"
+                    toggle="#signUpPassword">
+                    👁️
+                </button>
+                <p class="mt-1 text-sm text-red-600 hidden" id="signUpPasswordError" aria-live="polite">
+                    Password must be at least 6 characters.
+                </p>
+            </div>
+            <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700 transition">
+                Register
+            </button>
+        </form>
+    </div>
+
+    <script>
+        const showLogin = document.getElementById('showLogin');
+        const showSignUp = document.getElementById('showSignUp');
+        const loginForm = document.getElementById('loginForm');
+        const signUpForm = document.getElementById('signUpForm');
+
+        function setActiveTab(tab) {
+            if (tab === 'login') {
+                loginForm.classList.remove('hidden');
+                signUpForm.classList.add('hidden');
+                showLogin.classList.add('bg-primary', 'text-white');
+                showLogin.classList.remove(
+                    'bg-gray-300',
+                    'text-gray-800',
+                    'dark:bg-gray-700',
+                    'dark:text-white'
+                );
+                showSignUp.classList.remove('bg-primary', 'text-white');
+                showSignUp.classList.add(
+                    'bg-gray-300',
+                    'text-gray-800',
+                    'dark:bg-gray-700',
+                    'dark:text-white'
+                );
+            } else {
+                loginForm.classList.add('hidden');
+                signUpForm.classList.remove('hidden');
+                showSignUp.classList.add('bg-primary', 'text-white');
+                showSignUp.classList.remove(
+                    'bg-gray-300',
+                    'text-gray-800',
+                    'dark:bg-gray-700',
+                    'dark:text-white'
+                );
+                showLogin.classList.remove('bg-primary', 'text-white');
+                showLogin.classList.add(
+                    'bg-gray-300',
+                    'text-gray-800',
+                    'dark:bg-gray-700',
+                    'dark:text-white'
+                );
+            }
+            clearErrors();
+        }
+
+        showLogin.addEventListener('click', () => setActiveTab('login'));
+        showSignUp.addEventListener('click', () => setActiveTab('signUp'));
+
+        document.querySelectorAll('[toggle]').forEach((icon) => {
+            icon.addEventListener('click', () => {
+                const input = document.querySelector(icon.getAttribute('toggle'));
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                input.setAttribute('type', type);
+                icon.textContent = type === 'password' ? '👁️' : '🙈';
+            });
+        });
+
+        function clearErrors() {
+            document.querySelectorAll('p[id$="Error"]').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('animate-shake', 'animate-fadeIn');
+            });
+            document.querySelectorAll('input').forEach(input => {
+                input.classList.remove('border-red-600', 'animate-shake');
+            });
+        }
+
+        function showError(inputId, errorId) {
+            const errorEl = document.getElementById(errorId);
+            const inputEl = document.getElementById(inputId);
+            errorEl.classList.remove('hidden');
+            errorEl.classList.add('animate-shake', 'animate-fadeIn');
+            inputEl.classList.add('border-red-600', 'animate-shake');
+        }
+
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            clearErrors();
+
+            let valid = true;
+
+            const username = loginForm.username.value.trim();
+            const password = loginForm.password.value.trim();
+
+            if (!username) {
+                showError('loginUsername', 'loginUsernameError');
+                valid = false;
+            }
+            if (!password) {
+                showError('loginPassword', 'loginPasswordError');
+                valid = false;
+            }
+
+            if (valid) {
+                alert(`Logging in as ${username}`);
+                loginForm.reset();
+            }
+        });
+
+        signUpForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            clearErrors();
+
+            let valid = true;
+
+            const fullname = signUpForm.fullname.value.trim();
+            const email = signUpForm.email.value.trim();
+            const password = signUpForm.password.value;
+
+            if (!fullname) {
+                showError('signUpFullname', 'signUpFullnameError');
+                valid = false;
+            }
+
+            if (!email || !isValidEmail(email)) {
+                showError('signUpEmail', 'signUpEmailError');
+                valid = false;
+            }
+
+            if (!password || password.length < 6) {
+                showError('signUpPassword', 'signUpPasswordError');
+                valid = false;
+            }
+
+            if (valid) {
+                alert(`Registering ${fullname} with email ${email}`);
+                signUpForm.reset();
+            }
+        });
+
+        setActiveTab('login');
+    </script>
+
+
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            20%,
+            60% {
+                transform: translateX(-6px);
+            }
+
+            40%,
+            80% {
+                transform: translateX(6px);
+            }
+        }
+
+        .animate-shake {
+            animation: shake 0.3s ease-in-out;
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</body>
+
+</html>
