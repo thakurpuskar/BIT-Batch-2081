@@ -1,301 +1,182 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="h-full bg-gray-900">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BIT Batch 2081 | Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect - with Our </title>
     <link rel="icon" href="./assets/Logo.png" type="image/png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#7C3AED',
-                        softGray: '#E5E7EB',
-                    },
-                },
-            },
+            darkMode: 'class'
         };
     </script>
 </head>
 
-<body
-    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-200 to-purple-200 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900 relative overflow-hidden px-4">
+<body class="h-full flex items-center justify-center relative overflow-hidden bg-gray-900 dark:bg-gray-800">
 
-    <div
-        class="absolute inset-0 bg-[url('assets/gallery/Farewell%20Program.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay">
+    <div class="absolute inset-0 bg-cover bg-center brightness-75 z-0"
+        style="background-image: url('./assets/gallery/Farewell\ Program.jpg');">
     </div>
 
-    <div
-        class="relative bg-white dark:bg-gray-900 bg-opacity-90 dark:bg-opacity-90 rounded-3xl shadow-xl max-w-md w-full p-8 space-y-6 z-10">
-        <div class="flex justify-center mb-4">
-            <img src="./assets/Logo.png" alt="Logo"
-                class="h-16 w-16 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" />
-        </div>
-        <h2 class="text-center text-2xl md:text-3xl font-extrabold text-gray-800 dark:text-white mb-6">
-            Welcome to BIT Batch 2081
-        </h2>
-
-        <div class="flex justify-center mb-6 space-x-4">
-            <button id="showLogin"
-                class="tab-btn px-4 md:px-5 py-2 rounded-xl bg-primary text-white hover:scale-105 transition-transform"
-                type="button">
-                Login
-            </button>
-            <button id="showSignUp"
-                class="tab-btn px-4 md:px-5 py-2 rounded-xl bg-gray-300 text-gray-800 hover:scale-105 transition-transform dark:bg-gray-700 dark:text-white"
-                type="button">
-                Sign Up
-            </button>
+    <div class="z-10 w-full max-w-md p-6 sm:p-8 bg-white/10 backdrop-blur-md rounded-xl shadow-lg text-white border border-white/20">
+        <div class="flex justify-between mb-6">
+            <button onclick="showForm('login')" id="loginTab"
+                class="w-1/2 py-2 text-center font-semibold border-b-2 border-white transition">Login</button>
+            <button onclick="showForm('register')" id="registerTab"
+                class="w-1/2 py-2 text-center font-semibold border-b-2 border-transparent hover:border-white/60 transition">Register</button>
         </div>
 
-        <form id="loginForm" class="space-y-4 transition-all duration-300" novalidate autocomplete="off">
+        <form id="loginForm" class="space-y-4 animate-fadeIn" onsubmit="return validateForm('login')">
+            <h2 class="text-2xl font-bold">Welcome to BIT Batch 2081</h2>
+            <p class="text-sm text-white/70 mb-4">Please login to your account</p>
+
             <div>
-                <input type="text" name="username" id="loginUsername" placeholder="Username" autocomplete="username"
-                    class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-primary focus:outline-none dark:bg-gray-700 dark:text-white"
+                <label for="loginEmail" class="text-sm">Email</label>
+                <input type="email" id="loginEmail" name="email" placeholder="you@example.com"
+                    class="w-full mt-1 px-4 py-2 rounded bg-white/20 text-white placeholder-white/60 outline-none"
                     required />
-                <p class="mt-1 text-sm text-red-600 hidden" id="loginUsernameError" aria-live="polite">
-                    Username is required.
-                </p>
             </div>
-            <div class="relative">
-                <input type="password" id="loginPassword" name="password" placeholder="Password"
-                    autocomplete="current-password"
-                    class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-primary focus:outline-none dark:bg-gray-700 dark:text-white"
+
+            <div>
+                <label for="loginPassword" class="text-sm">Password</label>
+                <input type="password" id="loginPassword" name="password" placeholder="••••••••"
+                    class="w-full mt-1 px-4 py-2 rounded bg-white/20 text-white placeholder-white/60 outline-none"
                     required />
-                <button type="button" aria-label="Toggle password visibility"
-                    class="absolute top-2.5 right-3 text-xl text-gray-600 dark:text-white focus:outline-none"
-                    toggle="#loginPassword">
-                    👁️
-                </button>
-                <p class="mt-1 text-sm text-red-600 hidden" id="loginPasswordError" aria-live="polite">
-                    Password is required.
-                </p>
             </div>
-            <a href="./index.html"
-                class="block w-full text-center bg-primary text-white py-2 rounded-xl hover:bg-purple-700 transition">
-                Login
-            </a>
-            <!-- <button type="submit" class="w-full bg-primary text-white py-2 rounded-xl hover:bg-purple-700 transition">
-                Login
-            </button> -->
+
+            <div class="flex items-center justify-between">
+                <label class="inline-flex items-center text-sm">
+                    <input type="checkbox" class="form-checkbox text-purple-500 mr-2 bg-white/20" />
+                    Remember me
+                </label>
+                <a href="#" class="text-sm underline hover:opacity-80">Forgot password?</a>
+            </div>
+
+            <button type="submit"
+                class="w-full mt-2 bg-white/20 hover:bg-white/30 py-2 rounded font-semibold transition"><a href="./index.html">Login</a></button>
+
+            <div class="mt-6">
+                <p class="text-sm text-center mb-3">Or login with</p>
+                <div class="flex gap-3">
+                    <button type="button"
+                        class="w-1/2 flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 py-2 rounded font-semibold transition">
+                        <img src="https://img.icons8.com/color/24/000000/google-logo.png" alt="Google" />
+                        Google
+                    </button>
+                    <button type="button"
+                        class="w-1/2 flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 py-2 rounded font-semibold transition">
+                        <img src="https://img.icons8.com/fluency/24/facebook-new.png" alt="Facebook" />
+                        Facebook
+                    </button>
+                </div>
+            </div>
+
+            <p class="text-sm text-center mt-4">Don't have an account?
+                <a href="#" onclick="showForm('register')" class="underline font-medium hover:opacity-80">Register</a>
+            </p>
         </form>
 
-        <form id="signUpForm" class="space-y-4 hidden transition-all duration-300" novalidate autocomplete="off">
+        <form id="registerForm" class="space-y-4 hidden animate-fadeIn" onsubmit="return validateForm('register')">
+            <h2 class="text-2xl font-bold">Create Account</h2>
+            <p class="text-sm text-white/70 mb-4">Join us and start your journey</p>
+
             <div>
-                <input type="text" name="fullname" id="signUpFullname" placeholder="Full Name" autocomplete="name"
-                    class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-primary focus:outline-none dark:bg-gray-700 dark:text-white"
+                <label for="fullname" class="text-sm">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="name..."
+                    class="w-full mt-1 px-4 py-2 rounded bg-white/20 text-white placeholder-white/60 outline-none"
                     required />
-                <p class="mt-1 text-sm text-red-600 hidden" id="signUpFullnameError" aria-live="polite">
-                    Full name is required.
-                </p>
             </div>
+
             <div>
-                <input type="email" name="email" id="signUpEmail" placeholder="Email" autocomplete="email"
-                    class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-primary focus:outline-none dark:bg-gray-700 dark:text-white"
+                <label for="registerEmail" class="text-sm">Email</label>
+                <input type="email" id="registerEmail" name="email" placeholder="you@example.com"
+                    class="w-full mt-1 px-4 py-2 rounded bg-white/20 text-white placeholder-white/60 outline-none"
                     required />
-                <p class="mt-1 text-sm text-red-600 hidden" id="signUpEmailError" aria-live="polite">
-                    Valid email is required.
-                </p>
             </div>
-            <div class="relative">
-                <input type="password" id="signUpPassword" name="password" placeholder="Password"
-                    autocomplete="new-password"
-                    class="w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-primary focus:outline-none dark:bg-gray-700 dark:text-white"
-                    required minlength="6" />
-                <button type="button" aria-label="Toggle password visibility"
-                    class="absolute top-2.5 right-3 text-xl text-gray-600 dark:text-white focus:outline-none"
-                    toggle="#signUpPassword">
-                    👁️
-                </button>
-                <p class="mt-1 text-sm text-red-600 hidden" id="signUpPasswordError" aria-live="polite">
-                    Password must be at least 6 characters.
-                </p>
+
+            <div>
+                <label for="registerPassword" class="text-sm">Password</label>
+                <input type="password" id="registerPassword" name="password" placeholder="••••••••"
+                    class="w-full mt-1 px-4 py-2 rounded bg-white/20 text-white placeholder-white/60 outline-none"
+                    required />
             </div>
-            <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700 transition">
-                Register
-            </button>
+
+            <button type="submit"
+                class="w-full mt-2 bg-white/20 hover:bg-white/30 py-2 rounded font-semibold transition">Register</button>
+
+            <p class="text-sm text-center mt-4">Already have an account?
+                <a href="#" onclick="showForm('login')" class="underline font-medium hover:opacity-80">Login</a>
+            </p>
         </form>
     </div>
 
     <script>
-        const showLogin = document.getElementById('showLogin');
-        const showSignUp = document.getElementById('showSignUp');
-        const loginForm = document.getElementById('loginForm');
-        const signUpForm = document.getElementById('signUpForm');
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
 
-        function setActiveTab(tab) {
-            if (tab === 'login') {
-                loginForm.classList.remove('hidden');
-                signUpForm.classList.add('hidden');
-                showLogin.classList.add('bg-primary', 'text-white');
-                showLogin.classList.remove(
-                    'bg-gray-300',
-                    'text-gray-800',
-                    'dark:bg-gray-700',
-                    'dark:text-white'
-                );
-                showSignUp.classList.remove('bg-primary', 'text-white');
-                showSignUp.classList.add(
-                    'bg-gray-300',
-                    'text-gray-800',
-                    'dark:bg-gray-700',
-                    'dark:text-white'
-                );
+        function showForm(form) {
+            const loginForm = document.getElementById("loginForm");
+            const registerForm = document.getElementById("registerForm");
+            const loginTab = document.getElementById("loginTab");
+            const registerTab = document.getElementById("registerTab");
+
+            if (form === "login") {
+                loginForm.classList.remove("hidden");
+                registerForm.classList.add("hidden");
+                loginTab.classList.add("border-white");
+                registerTab.classList.remove("border-white");
             } else {
-                loginForm.classList.add('hidden');
-                signUpForm.classList.remove('hidden');
-                showSignUp.classList.add('bg-primary', 'text-white');
-                showSignUp.classList.remove(
-                    'bg-gray-300',
-                    'text-gray-800',
-                    'dark:bg-gray-700',
-                    'dark:text-white'
-                );
-                showLogin.classList.remove('bg-primary', 'text-white');
-                showLogin.classList.add(
-                    'bg-gray-300',
-                    'text-gray-800',
-                    'dark:bg-gray-700',
-                    'dark:text-white'
-                );
+                loginForm.classList.add("hidden");
+                registerForm.classList.remove("hidden");
+                loginTab.classList.remove("border-white");
+                registerTab.classList.add("border-white");
             }
-            clearErrors();
         }
 
-        showLogin.addEventListener('click', () => setActiveTab('login'));
-        showSignUp.addEventListener('click', () => setActiveTab('signUp'));
-
-        document.querySelectorAll('[toggle]').forEach((icon) => {
-            icon.addEventListener('click', () => {
-                const input = document.querySelector(icon.getAttribute('toggle'));
-                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
-                input.setAttribute('type', type);
-                icon.textContent = type === 'password' ? '👁️' : '🙈';
-            });
-        });
-
-        function clearErrors() {
-            document.querySelectorAll('p[id$="Error"]').forEach(el => {
-                el.classList.add('hidden');
-                el.classList.remove('animate-shake', 'animate-fadeIn');
-            });
-            document.querySelectorAll('input').forEach(input => {
-                input.classList.remove('border-red-600', 'animate-shake');
-            });
+        function validateForm(formType) {
+            if (formType === 'login') {
+                const email = document.getElementById("loginEmail").value;
+                const password = document.getElementById("loginPassword").value;
+                if (!email || !password) {
+                    alert("Please enter email and password.");
+                    return false;
+                }
+            } else {
+                const name = document.getElementById("fullname").value;
+                const email = document.getElementById("registerEmail").value;
+                const password = document.getElementById("registerPassword").value;
+                if (!name || !email || !password) {
+                    alert("Please fill out all fields.");
+                    return false;
+                }
+            }
+            return true;
         }
-
-        function showError(inputId, errorId) {
-            const errorEl = document.getElementById(errorId);
-            const inputEl = document.getElementById(inputId);
-            errorEl.classList.remove('hidden');
-            errorEl.classList.add('animate-shake', 'animate-fadeIn');
-            inputEl.classList.add('border-red-600', 'animate-shake');
-        }
-
-        function isValidEmail(email) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        }
-
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            clearErrors();
-
-            let valid = true;
-
-            const username = loginForm.username.value.trim();
-            const password = loginForm.password.value.trim();
-
-            if (!username) {
-                showError('loginUsername', 'loginUsernameError');
-                valid = false;
-            }
-            if (!password) {
-                showError('loginPassword', 'loginPasswordError');
-                valid = false;
-            }
-
-            if (valid) {
-                alert(`Logging in as ${username}`);
-                loginForm.reset();
-            }
-        });
-
-        signUpForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            clearErrors();
-
-            let valid = true;
-
-            const fullname = signUpForm.fullname.value.trim();
-            const email = signUpForm.email.value.trim();
-            const password = signUpForm.password.value;
-
-            if (!fullname) {
-                showError('signUpFullname', 'signUpFullnameError');
-                valid = false;
-            }
-
-            if (!email || !isValidEmail(email)) {
-                showError('signUpEmail', 'signUpEmailError');
-                valid = false;
-            }
-
-            if (!password || password.length < 6) {
-                showError('signUpPassword', 'signUpPasswordError');
-                valid = false;
-            }
-
-            if (valid) {
-                alert(`Registering ${fullname} with email ${email}`);
-                signUpForm.reset();
-            }
-        });
-
-        setActiveTab('login');
     </script>
 
-
     <style>
-        @keyframes shake {
-
-            0%,
-            100% {
-                transform: translateX(0);
-            }
-
-            20%,
-            60% {
-                transform: translateX(-6px);
-            }
-
-            40%,
-            80% {
-                transform: translateX(6px);
-            }
-        }
-
-        .animate-shake {
-            animation: shake 0.3s ease-in-out;
-        }
-
         .animate-fadeIn {
-            animation: fadeIn 0.5s ease forwards;
+            animation: fadeIn 0.5s ease-in-out;
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
+                transform: translateY(10px);
             }
 
             to {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
+
 </body>
 
 </html>
