@@ -110,44 +110,37 @@
 
   <section class="w-full bg-gray-50 py-6 pt-0">
     <div class="w-full h-[300px] md:h-[800px] overflow-hidden group">
-      <img src="./assets/gallery/Farewell Program.jpg" alt="BIT 2081 Group Photo"
+      <img src="./assets/gallery/Farewell Program.jpg" alt="group photo"
         class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
     </div>
   </section>
 
-
   <section class="py-12 px-4 md:px-12 grid md:grid-cols-2 gap-8">
-    <div class="bg-white shadow-md rounded-xl p-6">
-      <h3 class="text-xl font-semibold mb-4">📋Our Completed Semesters </h3>
-      <div class="flex flex-wrap gap-4">
-        <span
-          class="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium transition-all duration-300 hover:bg-blue-200 hover:text-blue-900 hover:shadow-md hover:scale-105 cursor-pointer">
-          <a href="./1stsem.html" class="hover:underline">1st Sem</a>
-        </span>
-      </div>
+    <div class="bg-white border border-gray-100 rounded-xl p-6">
+      <h3 class="text-xl font-semibold mb-4">Our Completed Semesters </h3>
+      <span
+        class="px-4 py-2 rounded-full bg-blue-200 text-blue-700 font-medium transition-all hover:scale-105 cursor-pointer">
+        <a href="./1stsem.html">1st Sem</a>
+      </span>
       <p class="text-sm text-gray-500 mt-4">Activities during that tenure !</p>
     </div>
-    <div class="bg-white shadow-md rounded-xl p-6">
-      <h3 class="text-xl font-semibold mb-4">⚡ Ongoing Semester</h3>
-      <div class="flex flex-wrap gap-4">
-        <span
-          class="px-4 py-2 rounded-full bg-green-100 text-green-700 font-medium transition-all duration-300 hover:bg-green-200 hover:text-green-900 hover:shadow-md hover:scale-105 cursor-pointer">
-          <a href="./2ndsem.html" class="hover:underline">2nd Sem</a>
-        </span>
-      </div>
+    <div class="bg-white border border-gray-100 rounded-xl p-6">
+      <h3 class="text-xl font-semibold mb-4">Ongoing Semester</h3>
+      <span
+        class="px-4 py-2 rounded-full bg-blue-200 text-blue-700 font-medium transition-all hover:scale-105 cursor-pointer">
+        <a href="./2ndsem.html">2nd Sem</a>
+      </span>
       <p class="text-sm text-gray-500 mt-4">Ongoing activities during this tenure !</p>
     </div>
   </section>
 
   <section class="py-12 px-4 text-center bg-gray-50">
-    <h3 class="text-2xl font-bold mb-12" id="ideasabout">🚀Ideas About</h3>
+    <h3 class="text-2xl font-bold mb-12" id="ideasabout">Ideas About</h3>
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
-      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col h-full max-w-sm" data-aos="fade-up"
+      <div class="bg-white rounded-xl border border-gray-200 flex flex-col h-full max-w-sm" data-aos="fade-up"
         data-aos-duration="1000">
-        <div class="overflow-hidden group">
-          <img src="./assets/about/comminity.jpg" alt="College Image"
-            class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105">
-        </div>
+        <img src="./assets/about/comminity.jpg" alt="College Image"
+          class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105">
         <div class="p-6 flex flex-col flex-grow justify-between">
           <div>
             <h4 class="text-gray-600 text-2xl font-bold mb-2">Our College</h4>
@@ -159,12 +152,10 @@
           </a>
         </div>
       </div>
-      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col h-full max-w-sm" data-aos="fade-up"
+      <div class="bg-white rounded-xl border border-gray-200 flex flex-col h-full max-w-sm" data-aos="fade-up"
         data-aos-duration="1000">
-        <div class="overflow-hidden group">
-          <img src="./assets/about/Bit info.png" alt="Sports Court"
-            class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105">
-        </div>
+        <img src="./assets/about/Bit info.png" alt="Sports Court"
+          class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105">
         <div class="p-6 flex flex-col flex-grow justify-between">
           <div>
             <h4 class="text-gray-600 text-2xl font-bold mb-2">Our Courses</h4>
@@ -176,12 +167,10 @@
           </a>
         </div>
       </div>
-      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col h-full max-w-sm" data-aos="fade-up"
+      <div class="bg-white rounded-xl border border-gray-200 flex flex-col h-full max-w-sm" data-aos="fade-up"
         data-aos-duration="1000">
-        <div class="overflow-hidden group">
-          <img src="./assets/about/ita.jpg" alt="Event Banner"
-            class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105">
-        </div>
+        <img src="./assets/about/ita.jpg" alt="Event Banner"
+          class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105">
         <div class="p-6 flex flex-col flex-grow justify-between">
           <div>
             <h4 class="text-gray-600 text-2xl font-bold mb-2">Our Organization</h4>
@@ -196,32 +185,21 @@
     </div>
   </section>
 
-  <style>
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-  </style>
-
   <div x-data="batchmatesApp()" class="max-w-7xl mx-auto py-10 px-4 text-center bg-gray-50">
-    <h3 class="text-3xl font-bold mb-4">🚀 Our Batchmates</h3>
+    <h3 class="text-2xl font-bold mb-4">Our Batchmates</h3>
     <p class="text-lg text-gray-700 mb-8 max-w-xl mx-auto">
       We are a group of passionate individuals from BIT Batch 2081, dedicated to making our college life memorable and
       impactful.
     </p>
     <div class="mb-6">
       <input x-model="search" type="search" placeholder="Search batchmates..."
-        class="w-full max-w-md px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" />
+        class="w-full max-w-md px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400" />
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
       <template x-for="mate in filteredBatchmates()" :key="mate.name">
         <a :href="mate.fb" target="_blank" rel="noopener noreferrer"
-          class="bg-white rounded-2xl shadow-xl overflow-hidden p-6 flex flex-col items-center text-center space-y-4 hover:shadow-2xl transition-shadow duration-300">
-          <div class="w-32 h-32 overflow-hidden rounded-full shadow-md group">
+          class="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col items-center text-center space-y-4">
+          <div class="w-32 h-32 overflow-hidden rounded-full group">
             <img :src="mate.image" :alt="mate.name"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
           </div>
@@ -282,564 +260,272 @@
   </script>
 
   <section class="bg-gray-50 py-12 px-6 min-h-screen">
-    <h2 class="text-3xl font-bold text-center text-gray-700 mb-10">📚 BIT 2081 - Semester Wise Subjects</h2>
-
-    <div class="max-w-6xl mx-auto space-y-10">
-
-      <div x-data="{ open: true }" class="bg-white rounded-xl shadow-md">
-        <button @click="open = !open"
-          class="w-full flex justify-between items-center px-6 py-4 bg-purple-600 text-white text-xl font-semibold rounded-t-xl">
-          1st Semester
-          <svg :class="{ 'rotate-180': open }" class="w-6 h-6 transform transition-transform duration-300" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-
-        <div x-show="open" x-collapse class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <template x-for="subject in [
-      {
-        name: 'Basic Mathematics',
-        teacher: 'Mr. Balbhadra Bhandari',
-        syllabus: 'https://drive.google.com/file/d/1THpjtH_T9bHvmcAoiuo2rKlm3hpHdTJe/view',
-        notes: 'https://drive.google.com/drive/folders/1YkSWH1BKBX0reA92XLyANfp4smm_DxYK',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=First&subject=Basic%20Mathematics'
-      },
-      {
-        name: 'Introduction to IT',
-        teacher: 'Mr. Bikash Soni',
-        syllabus: 'https://drive.google.com/file/d/1t8XYI9oXND1ksnp4hneSD7I8r_Rk8LbY/view',
-        notes: 'https://drive.google.com/drive/folders/1YSgl1qNcl9xGKCJ4V1G6-1ap92lmEEhd',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=First&subject=Introduction%20to%20Information%20Technology'
-      },
-      {
-        name: 'C Programming',
-        teacher: 'Mr. Mahesh Shah',
-        syllabus: 'https://drive.google.com/file/d/1j4qG0GBkLTTv65RBbtoRq8VR2gWaiVxx/view',
-        notes: 'https://drive.google.com/drive/folders/1a7KUNwiVj_0l0q80NlNnjjDbdmaPRXL3',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=First&subject=C%20Programming'
-      },
-      {
-        name: 'Digital Logic',
-        teacher: 'Mr. Dharti Raj Shah',
-        syllabus: 'https://drive.google.com/file/d/11CL5fVWkWa21dcBVhLNz40luu0fOCtXZ/view',
-        notes: 'https://drive.google.com/drive/folders/1z9DLEuFQgmrcrnvxaEFZ8kKlyU4cUS3-',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=First&subject=Digital%20Logic'
-      },
-      {
-        name: 'Sociology',
-        teacher: 'Mr. Bishal Shrestha',
-        syllabus: 'https://drive.google.com/file/d/1uQqnQyP5MDeMovJNnW2zQFUmOoDP4D9F/view',
-        notes: 'https://drive.google.com/drive/folders/1G5R2YmtYyPJ61NGufnv3_hKq4z6SABca',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=First&subject=Sociology'
-      }
-    ]" :key="subject.name">
-            <div
-              class="bg-purple-100 rounded-xl p-5 shadow hover:shadow-xl hover:scale-[1.02] transition transform duration-300">
-              <h3 class="text-xl font-bold text-purple-800 mb-2" x-text="subject.name"></h3>
-              <ul class="text-sm space-y-1 text-gray-700">
-                <li>📘 <strong>Syllabus:</strong>
-                  <a :href="subject.syllabus" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📝 <strong>Notes:</strong>
-                  <a :href="subject.notes" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📄 <strong>Question Papers:</strong>
-                  <a :href="subject.questionPapers" target="_blank" class="text-blue-600 hover:underline">Past
-                    Papers</a>
-                </li>
-                <li>👨‍🏫 <strong>Teacher:</strong> <span x-text="subject.teacher"></span></li>
-              </ul>
-            </div>
-          </template>
+    <h2 class="text-3xl font-bold text-center text-gray-700 mb-10">Semester Wise Subjects</h2>
+    <div class="max-w-6xl mx-auto space-y-10" x-data="semesters()">
+      <template x-for="[sem, subjects] in Object.entries(data)" :key="sem">
+        <div class="bg-white rounded-xl shadow-md">
+          <button @click="open = open === sem ? '' : sem"
+            class="w-full flex justify-between items-center px-6 py-4 bg-purple-600 text-white text-xl font-semibold rounded-t-xl">
+            <h2
+              x-text="(() => {let n = parseInt(sem.replace('sem',''));let s = ['th','st','nd','rd'][(n % 100 > 10 && n % 100 < 14) ? 0 : (n % 10 < 4 ? n % 10 : 0)];return `${n}${s} Semester`})()">
+            </h2>
+            <svg :class="{ 'rotate-180': open === sem }" class="w-6 h-6 transform transition-transform duration-300"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div x-show="open === sem" x-collapse class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <template x-for="subject in subjects" :key="subject.name">
+              <div
+                class="bg-purple-100 rounded-xl p-5 shadow hover:shadow-xl hover:scale-[1.02] transition transform duration-300">
+                <h3 class="text-xl font-bold text-purple-800 mb-2" x-text="subject.name"></h3>
+                <ul class="text-sm space-y-1 text-gray-700">
+                  <li>📘 <strong>Syllabus:</strong>
+                    <a :href="subject.syllabus" target="_blank" class="text-blue-600 hover:underline">View</a>
+                  </li>
+                  <li>📝 <strong>Notes:</strong>
+                    <a :href="subject.notes" target="_blank" class="text-blue-600 hover:underline">View</a>
+                  </li>
+                  <li>📄 <strong>Question Papers:</strong>
+                    <a :href="subject.questionPapers" target="_blank" class="text-blue-600 hover:underline">Past
+                      Papers</a>
+                  </li>
+                  <li>👨‍🏫 <strong>Teacher:</strong> <span x-text="subject.teacher"></span></li>
+                </ul>
+              </div>
+            </template>
+          </div>
         </div>
-      </div>
-
-      <div x-data="{ open: false }" class="bg-white rounded-xl shadow-md">
-        <button @click="open = !open"
-          class="w-full flex justify-between items-center px-6 py-4 bg-purple-600 text-white text-xl font-semibold rounded-t-xl">
-          2nd Semester
-          <svg :class="{ 'rotate-180': open }" class="w-6 h-6 transform transition-transform duration-300" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-
-        <div x-show="open" x-collapse class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <template x-for="subject in [
-      {
-        name: 'Microprocessor and Computer Architecture',
-        teacher: 'Mr. Bikash Soni',
-        syllabus: 'https://drive.google.com/file/d/1GF7gT1-V4M6T4tFi7hiv6r85344SxJ4R/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1ZfWvjtpSf0_wo2z8DfTAfJXMVZBCpCLR',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Microprocessor%20and%20Computer%20Architecture'
-      },
-      {
-        name: 'Discrete Structure',
-        teacher: 'Mr. Nar Bahadur Tamang',
-        syllabus: 'https://drive.google.com/file/d/1EZDpM8qL07FmIlOaVoc0DLcp4zrLzeOw/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1dRGZOzCzy61ucNtrjEQoCzi_dOSVHC6z',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Discrete%20Structure'
-      },
-      {
-        name: 'Object Oriented Programming',
-        teacher: 'Mr. Mahesh Shah',
-        syllabus: 'https://drive.google.com/file/u/0/d/1u7S68CYvRCaYTZQWgJmvdC4TBZ2hbESH/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1FdhxbsMuxqlqMpssUz72s74qZU7FEZnh',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Object%20Oriented%20Programming'
-      },
-      {
-        name: 'Basic Statistics',
-        teacher: 'Mrs. Roma Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1p8_oheucvj8AoRCzWOqPKXd6c_JKCiC5/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/16DZVl0_CHUCRkWhxR9wCFH5K7tGt17a4',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Basic%20Statistics'
-      },
-      {
-        name: 'Economics',
-        teacher: 'Mr. Surendra Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1JbYzm_VXtfbyxEnWZlQTIcYuElh1wTuD/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1O0Ej50XihnPWfNy77qUvA0Zz9_2vjCLZ',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Economics'
-      }
-    ]" :key="subject.name">
-            <div
-              class="bg-purple-100 rounded-xl p-5 shadow hover:shadow-xl hover:scale-[1.02] transition transform duration-300">
-              <h3 class="text-xl font-bold text-purple-800 mb-2" x-text="subject.name"></h3>
-              <ul class="text-sm space-y-1 text-gray-700">
-                <li>📘 <strong>Syllabus:</strong>
-                  <a :href="subject.syllabus" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📝 <strong>Notes:</strong>
-                  <a :href="subject.notes" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📄 <strong>Question Papers:</strong>
-                  <a :href="subject.questionPapers" target="_blank" class="text-blue-600 hover:underline">Past
-                    Papers</a>
-                </li>
-                <li>👨‍🏫 <strong>Teacher:</strong> <span x-text="subject.teacher"></span></li>
-              </ul>
-            </div>
-          </template>
-        </div>
-      </div>
-
-      <div x-data="{ open: false }" class="bg-white rounded-xl shadow-md">
-        <button @click="open = !open"
-          class="w-full flex justify-between items-center px-6 py-4 bg-purple-600 text-white text-xl font-semibold rounded-t-xl">
-          3rd Semester
-          <svg :class="{ 'rotate-180': open }" class="w-6 h-6 transform transition-transform duration-300" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-
-        <div x-show="open" x-collapse class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <template x-for="subject in [
-      {
-        name: 'Microprocessor and Computer Architecture',
-        teacher: 'Mr. Bikash Soni',
-        syllabus: 'https://drive.google.com/file/d/1GF7gT1-V4M6T4tFi7hiv6r85344SxJ4R/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1ZfWvjtpSf0_wo2z8DfTAfJXMVZBCpCLR',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Microprocessor%20and%20Computer%20Architecture'
-      },
-      {
-        name: 'Discrete Structure',
-        teacher: 'Mr. Nar Bahadur Tamang',
-        syllabus: 'https://drive.google.com/file/d/1EZDpM8qL07FmIlOaVoc0DLcp4zrLzeOw/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1dRGZOzCzy61ucNtrjEQoCzi_dOSVHC6z',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Discrete%20Structure'
-      },
-      {
-        name: 'Object Oriented Programming',
-        teacher: 'Mr. Mahesh Shah',
-        syllabus: 'https://drive.google.com/file/u/0/d/1u7S68CYvRCaYTZQWgJmvdC4TBZ2hbESH/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1FdhxbsMuxqlqMpssUz72s74qZU7FEZnh',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Object%20Oriented%20Programming'
-      },
-      {
-        name: 'Basic Statistics',
-        teacher: 'Mrs. Roma Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1p8_oheucvj8AoRCzWOqPKXd6c_JKCiC5/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/16DZVl0_CHUCRkWhxR9wCFH5K7tGt17a4',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Basic%20Statistics'
-      },
-      {
-        name: 'Economics',
-        teacher: 'Mr. Surendra Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1JbYzm_VXtfbyxEnWZlQTIcYuElh1wTuD/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1O0Ej50XihnPWfNy77qUvA0Zz9_2vjCLZ',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Economics'
-      }
-    ]" :key="subject.name">
-            <div
-              class="bg-purple-100 rounded-xl p-5 shadow hover:shadow-xl hover:scale-[1.02] transition transform duration-300">
-              <h3 class="text-xl font-bold text-purple-800 mb-2" x-text="subject.name"></h3>
-              <ul class="text-sm space-y-1 text-gray-700">
-                <li>📘 <strong>Syllabus:</strong>
-                  <a :href="subject.syllabus" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📝 <strong>Notes:</strong>
-                  <a :href="subject.notes" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📄 <strong>Question Papers:</strong>
-                  <a :href="subject.questionPapers" target="_blank" class="text-blue-600 hover:underline">Past
-                    Papers</a>
-                </li>
-                <li>👨‍🏫 <strong>Teacher:</strong> <span x-text="subject.teacher"></span></li>
-              </ul>
-            </div>
-          </template>
-        </div>
-      </div>
-
-      <div x-data="{ open: false }" class="bg-white rounded-xl shadow-md">
-        <button @click="open = !open"
-          class="w-full flex justify-between items-center px-6 py-4 bg-purple-600 text-white text-xl font-semibold rounded-t-xl">
-          4th Semester
-          <svg :class="{ 'rotate-180': open }" class="w-6 h-6 transform transition-transform duration-300" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-
-        <div x-show="open" x-collapse class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <template x-for="subject in [
-      {
-        name: 'Microprocessor and Computer Architecture',
-        teacher: 'Mr. Bikash Soni',
-        syllabus: 'https://drive.google.com/file/d/1GF7gT1-V4M6T4tFi7hiv6r85344SxJ4R/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1ZfWvjtpSf0_wo2z8DfTAfJXMVZBCpCLR',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Microprocessor%20and%20Computer%20Architecture'
-      },
-      {
-        name: 'Discrete Structure',
-        teacher: 'Mr. Nar Bahadur Tamang',
-        syllabus: 'https://drive.google.com/file/d/1EZDpM8qL07FmIlOaVoc0DLcp4zrLzeOw/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1dRGZOzCzy61ucNtrjEQoCzi_dOSVHC6z',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Discrete%20Structure'
-      },
-      {
-        name: 'Object Oriented Programming',
-        teacher: 'Mr. Mahesh Shah',
-        syllabus: 'https://drive.google.com/file/u/0/d/1u7S68CYvRCaYTZQWgJmvdC4TBZ2hbESH/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1FdhxbsMuxqlqMpssUz72s74qZU7FEZnh',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Object%20Oriented%20Programming'
-      },
-      {
-        name: 'Basic Statistics',
-        teacher: 'Mrs. Roma Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1p8_oheucvj8AoRCzWOqPKXd6c_JKCiC5/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/16DZVl0_CHUCRkWhxR9wCFH5K7tGt17a4',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Basic%20Statistics'
-      },
-      {
-        name: 'Economics',
-        teacher: 'Mr. Surendra Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1JbYzm_VXtfbyxEnWZlQTIcYuElh1wTuD/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1O0Ej50XihnPWfNy77qUvA0Zz9_2vjCLZ',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Economics'
-      }
-    ]" :key="subject.name">
-            <div
-              class="bg-purple-100 rounded-xl p-5 shadow hover:shadow-xl hover:scale-[1.02] transition transform duration-300">
-              <h3 class="text-xl font-bold text-purple-800 mb-2" x-text="subject.name"></h3>
-              <ul class="text-sm space-y-1 text-gray-700">
-                <li>📘 <strong>Syllabus:</strong>
-                  <a :href="subject.syllabus" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📝 <strong>Notes:</strong>
-                  <a :href="subject.notes" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📄 <strong>Question Papers:</strong>
-                  <a :href="subject.questionPapers" target="_blank" class="text-blue-600 hover:underline">Past
-                    Papers</a>
-                </li>
-                <li>👨‍🏫 <strong>Teacher:</strong> <span x-text="subject.teacher"></span></li>
-              </ul>
-            </div>
-          </template>
-        </div>
-      </div>
-
-      <div x-data="{ open: false }" class="bg-white rounded-xl shadow-md">
-        <button @click="open = !open"
-          class="w-full flex justify-between items-center px-6 py-4 bg-purple-600 text-white text-xl font-semibold rounded-t-xl">
-          5th Semester
-          <svg :class="{ 'rotate-180': open }" class="w-6 h-6 transform transition-transform duration-300" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-
-        <div x-show="open" x-collapse class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <template x-for="subject in [
-      {
-        name: 'Microprocessor and Computer Architecture',
-        teacher: 'Mr. Bikash Soni',
-        syllabus: 'https://drive.google.com/file/d/1GF7gT1-V4M6T4tFi7hiv6r85344SxJ4R/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1ZfWvjtpSf0_wo2z8DfTAfJXMVZBCpCLR',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Microprocessor%20and%20Computer%20Architecture'
-      },
-      {
-        name: 'Discrete Structure',
-        teacher: 'Mr. Nar Bahadur Tamang',
-        syllabus: 'https://drive.google.com/file/d/1EZDpM8qL07FmIlOaVoc0DLcp4zrLzeOw/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1dRGZOzCzy61ucNtrjEQoCzi_dOSVHC6z',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Discrete%20Structure'
-      },
-      {
-        name: 'Object Oriented Programming',
-        teacher: 'Mr. Mahesh Shah',
-        syllabus: 'https://drive.google.com/file/u/0/d/1u7S68CYvRCaYTZQWgJmvdC4TBZ2hbESH/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1FdhxbsMuxqlqMpssUz72s74qZU7FEZnh',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Object%20Oriented%20Programming'
-      },
-      {
-        name: 'Basic Statistics',
-        teacher: 'Mrs. Roma Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1p8_oheucvj8AoRCzWOqPKXd6c_JKCiC5/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/16DZVl0_CHUCRkWhxR9wCFH5K7tGt17a4',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Basic%20Statistics'
-      },
-      {
-        name: 'Economics',
-        teacher: 'Mr. Surendra Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1JbYzm_VXtfbyxEnWZlQTIcYuElh1wTuD/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1O0Ej50XihnPWfNy77qUvA0Zz9_2vjCLZ',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Economics'
-      }
-    ]" :key="subject.name">
-            <div
-              class="bg-purple-100 rounded-xl p-5 shadow hover:shadow-xl hover:scale-[1.02] transition transform duration-300">
-              <h3 class="text-xl font-bold text-purple-800 mb-2" x-text="subject.name"></h3>
-              <ul class="text-sm space-y-1 text-gray-700">
-                <li>📘 <strong>Syllabus:</strong>
-                  <a :href="subject.syllabus" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📝 <strong>Notes:</strong>
-                  <a :href="subject.notes" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📄 <strong>Question Papers:</strong>
-                  <a :href="subject.questionPapers" target="_blank" class="text-blue-600 hover:underline">Past
-                    Papers</a>
-                </li>
-                <li>👨‍🏫 <strong>Teacher:</strong> <span x-text="subject.teacher"></span></li>
-              </ul>
-            </div>
-          </template>
-        </div>
-      </div>
-
-      <div x-data="{ open: false }" class="bg-white rounded-xl shadow-md">
-        <button @click="open = !open"
-          class="w-full flex justify-between items-center px-6 py-4 bg-purple-600 text-white text-xl font-semibold rounded-t-xl">
-          6th Semester
-          <svg :class="{ 'rotate-180': open }" class="w-6 h-6 transform transition-transform duration-300" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-
-        <div x-show="open" x-collapse class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <template x-for="subject in [
-      {
-        name: 'Microprocessor and Computer Architecture',
-        teacher: 'Mr. Bikash Soni',
-        syllabus: 'https://drive.google.com/file/d/1GF7gT1-V4M6T4tFi7hiv6r85344SxJ4R/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1ZfWvjtpSf0_wo2z8DfTAfJXMVZBCpCLR',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Microprocessor%20and%20Computer%20Architecture'
-      },
-      {
-        name: 'Discrete Structure',
-        teacher: 'Mr. Nar Bahadur Tamang',
-        syllabus: 'https://drive.google.com/file/d/1EZDpM8qL07FmIlOaVoc0DLcp4zrLzeOw/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1dRGZOzCzy61ucNtrjEQoCzi_dOSVHC6z',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Discrete%20Structure'
-      },
-      {
-        name: 'Object Oriented Programming',
-        teacher: 'Mr. Mahesh Shah',
-        syllabus: 'https://drive.google.com/file/u/0/d/1u7S68CYvRCaYTZQWgJmvdC4TBZ2hbESH/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1FdhxbsMuxqlqMpssUz72s74qZU7FEZnh',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Object%20Oriented%20Programming'
-      },
-      {
-        name: 'Basic Statistics',
-        teacher: 'Mrs. Roma Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1p8_oheucvj8AoRCzWOqPKXd6c_JKCiC5/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/16DZVl0_CHUCRkWhxR9wCFH5K7tGt17a4',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Basic%20Statistics'
-      },
-      {
-        name: 'Economics',
-        teacher: 'Mr. Surendra Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1JbYzm_VXtfbyxEnWZlQTIcYuElh1wTuD/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1O0Ej50XihnPWfNy77qUvA0Zz9_2vjCLZ',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Economics'
-      }
-    ]" :key="subject.name">
-            <div
-              class="bg-purple-100 rounded-xl p-5 shadow hover:shadow-xl hover:scale-[1.02] transition transform duration-300">
-              <h3 class="text-xl font-bold text-purple-800 mb-2" x-text="subject.name"></h3>
-              <ul class="text-sm space-y-1 text-gray-700">
-                <li>📘 <strong>Syllabus:</strong>
-                  <a :href="subject.syllabus" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📝 <strong>Notes:</strong>
-                  <a :href="subject.notes" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📄 <strong>Question Papers:</strong>
-                  <a :href="subject.questionPapers" target="_blank" class="text-blue-600 hover:underline">Past
-                    Papers</a>
-                </li>
-                <li>👨‍🏫 <strong>Teacher:</strong> <span x-text="subject.teacher"></span></li>
-              </ul>
-            </div>
-          </template>
-        </div>
-      </div>
-
-      <div x-data="{ open: false }" class="bg-white rounded-xl shadow-md">
-        <button @click="open = !open"
-          class="w-full flex justify-between items-center px-6 py-4 bg-purple-600 text-white text-xl font-semibold rounded-t-xl">
-          7th Semester
-          <svg :class="{ 'rotate-180': open }" class="w-6 h-6 transform transition-transform duration-300" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-
-        <div x-show="open" x-collapse class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <template x-for="subject in [
-      {
-        name: 'Microprocessor and Computer Architecture',
-        teacher: 'Mr. Bikash Soni',
-        syllabus: 'https://drive.google.com/file/d/1GF7gT1-V4M6T4tFi7hiv6r85344SxJ4R/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1ZfWvjtpSf0_wo2z8DfTAfJXMVZBCpCLR',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Microprocessor%20and%20Computer%20Architecture'
-      },
-      {
-        name: 'Discrete Structure',
-        teacher: 'Mr. Nar Bahadur Tamang',
-        syllabus: 'https://drive.google.com/file/d/1EZDpM8qL07FmIlOaVoc0DLcp4zrLzeOw/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1dRGZOzCzy61ucNtrjEQoCzi_dOSVHC6z',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Discrete%20Structure'
-      },
-      {
-        name: 'Object Oriented Programming',
-        teacher: 'Mr. Mahesh Shah',
-        syllabus: 'https://drive.google.com/file/u/0/d/1u7S68CYvRCaYTZQWgJmvdC4TBZ2hbESH/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1FdhxbsMuxqlqMpssUz72s74qZU7FEZnh',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Object%20Oriented%20Programming'
-      },
-      {
-        name: 'Basic Statistics',
-        teacher: 'Mrs. Roma Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1p8_oheucvj8AoRCzWOqPKXd6c_JKCiC5/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/16DZVl0_CHUCRkWhxR9wCFH5K7tGt17a4',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Basic%20Statistics'
-      },
-      {
-        name: 'Economics',
-        teacher: 'Mr. Surendra Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1JbYzm_VXtfbyxEnWZlQTIcYuElh1wTuD/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1O0Ej50XihnPWfNy77qUvA0Zz9_2vjCLZ',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Economics'
-      }
-    ]" :key="subject.name">
-            <div
-              class="bg-purple-100 rounded-xl p-5 shadow hover:shadow-xl hover:scale-[1.02] transition transform duration-300">
-              <h3 class="text-xl font-bold text-purple-800 mb-2" x-text="subject.name"></h3>
-              <ul class="text-sm space-y-1 text-gray-700">
-                <li>📘 <strong>Syllabus:</strong>
-                  <a :href="subject.syllabus" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📝 <strong>Notes:</strong>
-                  <a :href="subject.notes" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📄 <strong>Question Papers:</strong>
-                  <a :href="subject.questionPapers" target="_blank" class="text-blue-600 hover:underline">Past
-                    Papers</a>
-                </li>
-                <li>👨‍🏫 <strong>Teacher:</strong> <span x-text="subject.teacher"></span></li>
-              </ul>
-            </div>
-          </template>
-        </div>
-      </div>
-
-      <div x-data="{ open: false }" class="bg-white rounded-xl shadow-md">
-        <button @click="open = !open"
-          class="w-full flex justify-between items-center px-6 py-4 bg-purple-600 text-white text-xl font-semibold rounded-t-xl">
-          8th Semester
-          <svg :class="{ 'rotate-180': open }" class="w-6 h-6 transform transition-transform duration-300" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-
-        <div x-show="open" x-collapse class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <template x-for="subject in [
-      {
-        name: 'Microprocessor and Computer Architecture',
-        teacher: 'Mr. Bikash Soni',
-        syllabus: 'https://drive.google.com/file/d/1GF7gT1-V4M6T4tFi7hiv6r85344SxJ4R/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1ZfWvjtpSf0_wo2z8DfTAfJXMVZBCpCLR',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Microprocessor%20and%20Computer%20Architecture'
-      },
-      {
-        name: 'Discrete Structure',
-        teacher: 'Mr. Nar Bahadur Tamang',
-        syllabus: 'https://drive.google.com/file/d/1EZDpM8qL07FmIlOaVoc0DLcp4zrLzeOw/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1dRGZOzCzy61ucNtrjEQoCzi_dOSVHC6z',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Discrete%20Structure'
-      },
-      {
-        name: 'Object Oriented Programming',
-        teacher: 'Mr. Mahesh Shah',
-        syllabus: 'https://drive.google.com/file/u/0/d/1u7S68CYvRCaYTZQWgJmvdC4TBZ2hbESH/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1FdhxbsMuxqlqMpssUz72s74qZU7FEZnh',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Object%20Oriented%20Programming'
-      },
-      {
-        name: 'Basic Statistics',
-        teacher: 'Mrs. Roma Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1p8_oheucvj8AoRCzWOqPKXd6c_JKCiC5/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/16DZVl0_CHUCRkWhxR9wCFH5K7tGt17a4',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Basic%20Statistics'
-      },
-      {
-        name: 'Economics',
-        teacher: 'Mr. Surendra Ghimire',
-        syllabus: 'https://drive.google.com/file/d/1JbYzm_VXtfbyxEnWZlQTIcYuElh1wTuD/view',
-        notes: 'https://drive.google.com/drive/u/1/folders/1O0Ej50XihnPWfNy77qUvA0Zz9_2vjCLZ',
-        questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Economics'
-      }
-    ]" :key="subject.name">
-            <div
-              class="bg-purple-100 rounded-xl p-5 shadow hover:shadow-xl hover:scale-[1.02] transition transform duration-300">
-              <h3 class="text-xl font-bold text-purple-800 mb-2" x-text="subject.name"></h3>
-              <ul class="text-sm space-y-1 text-gray-700">
-                <li>📘 <strong>Syllabus:</strong>
-                  <a :href="subject.syllabus" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📝 <strong>Notes:</strong>
-                  <a :href="subject.notes" target="_blank" class="text-blue-600 hover:underline">View</a>
-                </li>
-                <li>📄 <strong>Question Papers:</strong>
-                  <a :href="subject.questionPapers" target="_blank" class="text-blue-600 hover:underline">Past
-                    Papers</a>
-                </li>
-                <li>👨‍🏫 <strong>Teacher:</strong> <span x-text="subject.teacher"></span></li>
-              </ul>
-            </div>
-          </template>
-        </div>
-      </div>
-
+      </template>
     </div>
   </section>
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('semesters', () => ({
+        open: '',
+        data: {
+          sem1: [
+            { name: 'Basic Mathematics', teacher: 'Mr. Balbhadra Bhandari', syllabus: 'https://drive.google.com/file/d/1THpjtH_T9bHvmcAoiuo2rKlm3hpHdTJe/view', notes: 'https://drive.google.com/drive/folders/1YkSWH1BKBX0reA92XLyANfp4smm_DxYK', questionPapers: 'https://bitinfonepal.com/resources/questions?semester=First&subject=Basic%20Mathematics' },
+            { name: 'Introduction to IT', teacher: 'Mr. Bikash Soni', syllabus: 'https://drive.google.com/file/d/1t8XYI9oXND1ksnp4hneSD7I8r_Rk8LbY/view', notes: 'https://drive.google.com/drive/folders/1YSgl1qNcl9xGKCJ4V1G6-1ap92lmEEhd', questionPapers: 'https://bitinfonepal.com/resources/questions?semester=First&subject=Introduction%20to%20Information%20Technology' },
+            { name: 'C Programming', teacher: 'Mr. Mahesh Shah', syllabus: 'https://drive.google.com/file/d/1j4qG0GBkLTTv65RBbtoRq8VR2gWaiVxx/view', notes: 'https://drive.google.com/drive/folders/1a7KUNwiVj_0l0q80NlNnjjDbdmaPRXL3', questionPapers: 'https://bitinfonepal.com/resources/questions?semester=First&subject=C%20Programming' },
+            {
+              name: 'Digital Logic',
+              teacher: 'Mr. Dharti Raj Shah',
+              syllabus: 'https://drive.google.com/file/d/11CL5fVWkWa21dcBVhLNz40luu0fOCtXZ/view',
+              notes: 'https://drive.google.com/drive/folders/1z9DLEuFQgmrcrnvxaEFZ8kKlyU4cUS3-',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=First&subject=Digital%20Logic'
+            },
+            {
+              name: 'Sociology',
+              teacher: 'Mr. Bishal Shrestha',
+              syllabus: 'https://drive.google.com/file/d/1uQqnQyP5MDeMovJNnW2zQFUmOoDP4D9F/view',
+              notes: 'https://drive.google.com/drive/folders/1G5R2YmtYyPJ61NGufnv3_hKq4z6SABca',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=First&subject=Sociology'
+            }
+          ],
+          sem2: [
+            {
+              name: 'Microprocessor and Computer Architecture',
+              teacher: 'Mr. Bikash Soni',
+              syllabus: 'https://drive.google.com/file/d/1GF7gT1-V4M6T4tFi7hiv6r85344SxJ4R/view',
+              notes: 'https://drive.google.com/drive/u/1/folders/1ZfWvjtpSf0_wo2z8DfTAfJXMVZBCpCLR',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Microprocessor%20and%20Computer%20Architecture'
+            },
+            {
+              name: 'Discrete Structure',
+              teacher: 'Mr. Nar Bahadur Tamang',
+              syllabus: 'https://drive.google.com/file/d/1EZDpM8qL07FmIlOaVoc0DLcp4zrLzeOw/view',
+              notes: 'https://drive.google.com/drive/u/1/folders/1dRGZOzCzy61ucNtrjEQoCzi_dOSVHC6z',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Discrete%20Structure'
+            },
+            {
+              name: 'Object Oriented Programming',
+              teacher: 'Mr. Mahesh Shah',
+              syllabus: 'https://drive.google.com/file/u/0/d/1u7S68CYvRCaYTZQWgJmvdC4TBZ2hbESH/view',
+              notes: 'https://drive.google.com/drive/u/1/folders/1FdhxbsMuxqlqMpssUz72s74qZU7FEZnh',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Object%20Oriented%20Programming'
+            },
+            {
+              name: 'Basic Statistics',
+              teacher: 'Mrs. Roma Ghimire',
+              syllabus: 'https://drive.google.com/file/d/1p8_oheucvj8AoRCzWOqPKXd6c_JKCiC5/view',
+              notes: 'https://drive.google.com/drive/u/1/folders/16DZVl0_CHUCRkWhxR9wCFH5K7tGt17a4',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Basic%20Statistics'
+            },
+            {
+              name: 'Economics',
+              teacher: 'Mr. Surendra Ghimire',
+              syllabus: 'https://drive.google.com/file/d/1JbYzm_VXtfbyxEnWZlQTIcYuElh1wTuD/view',
+              notes: 'https://drive.google.com/drive/u/1/folders/1O0Ej50XihnPWfNy77qUvA0Zz9_2vjCLZ',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Second&subject=Economics'
+            }
+          ],
+          sem3: [
+            {
+              name: 'Data Structures and Algorithms',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Third&subject=Data%20Structures%20and%20Algorithms',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Third&subject=Data%20Structures%20and%20Algorithms',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Third&subject=Data%20Structures%20and%20Algorithms',
+            },
+            {
+              name: 'Web Technology',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Third&subject=Web%20Technology',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Third&subject=Web%20Technology',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Third&subject=Web%20Technology',
+            },
+            {
+              name: 'Numerical Methods',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Third&subject=Numerical%20Methods',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Third&subject=Numerical%20Methods',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Third&subject=Numerical%20Methods',
+            },
+            {
+              name: 'Software Engineering',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Third&subject=Software%20Engineering',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Third&subject=Software%20Engineering',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Third&subject=Software%20Engineering',
+            },
+            {
+              name: 'Theory of Computation',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Third&subject=Theory%20of%20Computation',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Third&subject=Theory%20of%20Computation',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Third&subject=Theory%20of%20Computation',
+            },
+          ],
+          sem4: [
+            {
+              name: 'Operating Systems',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Fourth&subject=Operating%20Systems',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Fourth&subject=Operating%20Systems',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Fourth&subject=Operating%20Systems',
+            },
+            {
+              name: 'Database Management System',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Fourth&subject=Database%20Management%20System',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Fourth&subject=Database%20Management%20System',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Fourth&subject=Database%20Management%20System',
+            },
+            {
+              name: 'Computer Networks',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Fourth&subject=Computer%20Networks',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Fourth&subject=Computer%20Networks',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Fourth&subject=Computer%20Networks',
+            },
+            {
+              name: 'Computer Graphics and Animation',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Fourth&subject=Computer%20Graphics%20and%20Animation',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Fourth&subject=Computer%20Graphics%20and%20Animation',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Fourth&subject=Computer%20Graphics%20and%20Animation',
+            },
+            {
+              name: 'Research Methodology for BIT',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Fourth&subject=Research%20Methodology%20for%20BIT',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Fourth&subject=Research%20Methodology%20for%20BIT',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Fourth&subject=Research%20Methodology%20for%20BIT',
+            },
+          ],
+          sem5: [
+            {
+              name: 'Design and Analysis of Algorithms',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Fifth&subject=Design%20and%20Analysis%20of%20Algorithms',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Fifth&subject=Design%20and%20Analysis%20of%20Algorithms',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Fifth&subject=Design%20and%20Analysis%20of%20Algorithms',
+            },
+            {
+              name: 'System Analysis and Design',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Fifth&subject=System%20Analysis%20and%20Design',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Fifth&subject=System%20Analysis%20and%20Design',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Fifth&subject=System%20Analysis%20and%20Design',
+            },
+            {
+              name: 'Cryptography',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Fifth&subject=Cryptography',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Fifth&subject=Cryptography',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Fifth&subject=Cryptography',
+            },
+            {
+              name: 'Multimedia Systems',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Fifth&subject=Multimedia%20Systems',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Fifth&subject=Multimedia%20Systems',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Fifth&subject=Multimedia%20Systems',
+            },
+            {
+              name: 'Knowledge Management',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Fifth&subject=Knowledge%20Management',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Fifth&subject=Knowledge%20Management',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Fifth&subject=Knowledge%20Management',
+            },
+          ],
+          sem6: [
+            {
+              name: 'Mobile Application Development',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Sixth&subject=Mobile%20Application%20Development',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Sixth&subject=Mobile%20Application%20Development',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Sixth&subject=Mobile%20Application%20Development',
+            },
+            {
+              name: 'Cloud Computing',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Sixth&subject=Cloud%20Computing',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Sixth&subject=Cloud%20Computing',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Sixth&subject=Cloud%20Computing',
+            },
+            {
+              name: 'Geographical Information System',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Sixth&subject=Geographical%20Information%20System',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Sixth&subject=Geographical%20Information%20System',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Sixth&subject=Geographical%20Information%20System',
+            },
+            {
+              name: 'Cyber Law and Professional Ethics',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Sixth&subject=Cyber%20Law%20and%20Professional%20Ethics',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Sixth&subject=Cyber%20Law%20and%20Professional%20Ethics',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Sixth&subject=Cyber%20Law%20and%20Professional%20Ethics',
+            },
+          ],
+          sem7: [
+            {
+              name: 'Big Data',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Seventh&subject=Big%20Data',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Seventh&subject=Big%20Data',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Seventh&subject=Big%20Data',
+            },
+            {
+              name: 'IT Governance',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Seventh&subject=IT%20Governance',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Seventh&subject=IT%20Governance',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Seventh&subject=IT%20Governance',
+            },
+            {
+              name: 'E-Governance',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Seventh&subject=E-Governance',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Seventh&subject=E-Governance',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Seventh&subject=E-Governance',
+            },
+            {
+              name: 'Project Work I',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Seventh&subject=Project%20Work%20I',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Seventh&subject=Project%20Work%20I',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Seventh&subject=Project%20Work%20I',
+            },
+          ],
+          sem8: [
+            {
+              name: 'Internship',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Eighth&subject=Internship',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Eighth&subject=Internship',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Eighth&subject=Internship',
+            },
+            {
+              name: 'Project Work II',
+              syllabus: 'https://bitinfonepal.com/resources/syllabus?semester=Eighth&subject=Project%20Work%20II',
+              notes: 'https://bitinfonepal.com/resources/notes?semester=Eighth&subject=Project%20Work%20II',
+              questionPapers: 'https://bitinfonepal.com/resources/questions?semester=Eighth&subject=Project%20Work%20II',
+            },
+          ]
+        }
+      }))
+    })
+  </script>
 
   <section class="bg-gray-50 py-12 px-4">
     <h3 class="text-2xl font-bold text-center mb-10">💬 Student Feedback</h3>
