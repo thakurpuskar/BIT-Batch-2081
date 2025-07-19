@@ -6,8 +6,9 @@
 <link rel="icon" href="./assets/Logo.png" type="image/png">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<script src="./homepage.js"></script>
+<script src="./Javascript/homepage.js"></script>
 <style>
   [x-cloak] {
     display: none !important;
@@ -16,14 +17,57 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans">
-  <div id="header-container"></div>
-  <section class="w-full bg-gray-50 py-6 pt-0">
+  <header x-data="navbar()" x-init="init()"
+    :class="{ 'bg-white/80 border shadow backdrop-blur-lg md:top-3 md:rounded-3xl': scrolled }"
+    class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md py-4 transition-all duration-300 md:top-6 lg:max-w-screen-lg">
+    <div class="px-4">
+      <div class="flex items-center justify-between">
+        <a href="./index.html" class="flex items-center gap-2">
+          <img src="./assets/Logo.png" alt="BIT Logo" class="h-10 w-10 rounded-full object-cover" />
+          <span class="text-lg md:text-xl font-extrabold text-gray-800">BIT Batch 2081</span>
+        </a>
+        <div class="md:hidden">
+          <button @click="open = !open" class="text-gray-700 focus:outline-none" aria-label="Toggle menu">
+            <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-show="open" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <nav class="hidden md:flex gap-6 items-center">
+          <a href="./index.html" class="text-sm font-medium text-gray-800 hover:text-purple-600 transition">Home</a>
+          <a href="./batchmates.html"
+            class="text-sm font-medium text-gray-800 hover:text-purple-600 transition">Batchmates</a>
+          <a href="./teachers.html"
+            class="text-sm font-medium text-gray-800 hover:text-purple-600 transition">Teachers</a>
+          <a href="./semesters.html"
+            class="text-sm font-medium text-gray-800 hover:text-purple-600 transition">Semesters</a>
+          <a href="./gallery.html"
+            class="text-sm font-medium text-gray-800 hover:text-purple-600 transition">Gallery</a>
+        </nav>
+      </div>
+      <div x-show="open" x-cloak class="md:hidden mt-4 flex flex-col items-center gap-0.99">
+        <a href="./index.html"
+          class="block text-sm font-medium text-gray-800 hover:bg-gray-100 px-3 py-2 rounded transition">Home</a>
+        <a href="./batchmates.html"
+          class="block text-sm font-medium text-gray-800 hover:bg-gray-100 px-3 py-2 rounded transition">Batchmates</a>
+        <a href="./teachers.html"
+          class="block text-sm font-medium text-gray-800 hover:bg-gray-100 px-3 py-2 rounded transition">Teachers</a>
+        <a href="./semesters.html"
+          class="block text-sm font-medium text-gray-800 hover:bg-gray-100 px-3 py-2 rounded transition">Semesters</a>
+        <a href="./gallery.html"
+          class="block text-sm font-medium text-gray-800 hover:bg-gray-100 px-3 py-2 rounded transition">Gallery</a>
+      </div>
+    </div>
+  </header>
+  <section class="w-full bg-gray-50">
     <div class="w-full h-[300px] md:h-[800px] overflow-hidden group">
       <img src="./assets/gallery/Farewell Program.jpg" alt="group photo"
         class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
     </div>
   </section>
-
   <section class="py-12 px-4 md:px-12 grid md:grid-cols-2 gap-8">
     <div class="bg-white border border-gray-100 rounded-xl p-6">
       <h3 class="text-xl font-semibold mb-4">Our Completed Semesters </h3>
@@ -42,8 +86,7 @@
       <p class="text-sm text-gray-500 mt-4">Ongoing activities during this tenure !</p>
     </div>
   </section>
-
-  <section class="py-12 px-4 text-center bg-gray-50">
+  <section class="text-center bg-gray-50">
     <h3 class="text-2xl font-bold mb-12" id="ideasabout">Ideas About</h3>
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
       <div class="bg-white rounded-xl border border-gray-200 flex flex-col h-full max-w-sm overflow-hidden group"
@@ -93,9 +136,8 @@
       </div>
     </div>
   </section>
-
   <div x-data="batchmatesApp()" class="max-w-7xl mx-auto py-10 px-4 text-center bg-gray-50">
-    <h3 class="text-2xl font-bold mb-12">Our Batchmates</h3>
+    <h3 class="text-2xl font-bold mb-8">Our Batchmates</h3>
     <p class="text-lg text-gray-700 mb-5 max-w-xl mx-auto">
       We are a group of passionate individuals from BIT Batch 2081, dedicated to making our college life memorable and
       impactful.
@@ -117,9 +159,31 @@
       </template>
     </div>
   </div>
-
-  <section class="bg-gray-50 py-12 px-6 min-h-screen">
-    <h2 class="text-2xl font-bold text-center mb-10">Semester Wise Subjects</h2>
+  <section x-data="teacherDirectory()" class="bg-gray-50 px-4">
+    <h3 class="text-2xl font-bold text-center text-gray-700 mb-6">Meet Our Teachers</h3>
+    <p class="text-lg text-gray-700 mb-5 max-w-xl mx-auto text-center">
+      Dedicated educators guiding BIT Batch 2081 toward excellence.
+    </p>
+    <div class="mb-6 text-center">
+      <input x-model="search" type="search" placeholder="Search teachers..."
+        class="w-full max-w-md px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400" />
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+      <template x-for="teacher in filteredTeachers" :key="teacher.name">
+        <a :href="teacher.facebook" target="_blank" rel="noopener noreferrer"
+          class="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col items-center text-center space-y-4">
+          <div class="w-32 h-32 overflow-hidden rounded-full group">
+            <img :src="teacher.image" :alt="teacher.name"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900" x-text="teacher.name"></h3>
+          <p class="text-sm text-gray-600" x-text="teacher.subject"></p>
+        </a>
+      </template>
+    </div>
+  </section>
+  <section class="bg-gray-50 px-6 min-h-screen">
+    <h2 class="text-2xl font-bold text-center mb-10 py-10">Semester Wise Subjects</h2>
     <div class="max-w-6xl mx-auto space-y-10" x-data="semesters()">
       <template x-for="[sem, subjects] in Object.entries(data)" :key="sem">
         <div class="bg-white rounded-xl">
@@ -157,7 +221,18 @@
       </template>
     </div>
   </section>
-
+  <section x-data="gallery()" class="bg-gray-50 py-12 px-4">
+    <h3 class="text-2xl font-bold text-center text-gray-700 mb-8">Our Gallery</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <template x-for="(item, index) in images" :key="index">
+        <div class="w-full h-40 rounded-md">
+          <img :src="item.src" :alt="item.alt"
+            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+        </div>
+        <p class="text-sm text-gray-700 font-medium" x-text="item.caption"></p>
+      </template>
+    </div>
+  </section>
   <section class="bg-gray-50 py-12 px-4">
     <h3 class="text-2xl font-bold text-center mb-10">Student Feedback</h3>
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -194,7 +269,6 @@
         </div>
       </div>
   </section>
-
   <section class="bg-gray-50 px-4">
     <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl border border-gray-200">
       <h4 class="text-2xl font-bold text-center mb-10">Share Your Feedback</h4>
@@ -221,7 +295,6 @@
       </form>
     </div>
   </section>
-
   <div id="footer-container"></div>
 </body>
 

@@ -1,7 +1,6 @@
 function navbar() {
   return {
     open: false,
-    loggedIn: false,
     scrolled: false,
     init() {
       window.addEventListener("scroll", () => {
@@ -195,6 +194,70 @@ function batchmatesApp() {
       return this.batchmates.filter((mate) =>
         mate.name.toLowerCase().includes(this.search.toLowerCase())
       );
+    },
+  };
+}
+function teacherDirectory() {
+  return {
+    search: "",
+    teachers: [
+      {
+        name: "Balbhadra Bhandari",
+        subject: "Basic Mathematics",
+        facebook: "https://www.facebook.com/balbhadra.bhandari",
+        image: "assets/teachers/balbadhur.jpg",
+      },
+      {
+        name: "Mahesh Kumar Shah",
+        subject: "OOP & C Programming",
+        facebook: "https://www.facebook.com/mahesh.shah.1460",
+        image: "assets/teachers/mahesh.jpg",
+      },
+      {
+        name: "Bikash Soni",
+        subject: "IIT & Microprocessor",
+        facebook: "https://www.facebook.com/bikash.so",
+        image: "assets/teachers/bikash.png",
+      },
+      {
+        name: "Dharti Raj Shah",
+        subject: "Digital Logic",
+        facebook: "https://www.facebook.com/dhartiraj",
+        image: "assets/teachers/Dhartiraj.jpg",
+      },
+      {
+        name: "Bishal Shrestha",
+        subject: "Sociology",
+        facebook: "https://www.facebook.com/bishal.shrestha.265942",
+        image: "assets/teachers/bishal shrestha.jpg",
+      },
+      {
+        name: "Roma Ghimire",
+        subject: "Basic Statistics",
+        facebook: "https://www.facebook.com/roma.ghimire.7",
+        image: "assets/teachers/Roma.jpg",
+      },
+      {
+        name: "Nar Bahadur Tamang",
+        subject: "Discrete Structure",
+        facebook: "https://www.facebook.com/rnaren.nbt#",
+        image: "assets/teachers/nar bahadur.jpg",
+      },
+      {
+        name: "Surendra Ghimire",
+        subject: "Economics",
+        facebook: "https://www.facebook.com/surendra.ghimire.908",
+        image: "assets/teachers/surendra.jpg",
+      },
+    ],
+    get filteredTeachers() {
+      return this.teachers.filter((t) => {
+        const searchTerm = this.search.toLowerCase();
+        return (
+          t.name.toLowerCase().includes(searchTerm) ||
+          t.subject.toLowerCase().includes(searchTerm)
+        );
+      });
     },
   };
 }
@@ -691,12 +754,57 @@ document.addEventListener("alpine:init", () => {
     },
   }));
 });
-
-fetch("header.html")
-  .then((res) => res.text())
-  .then((data) => {
-    document.getElementById("header-container").innerHTML = data;
-  });
+function gallery() {
+  return {
+    images: [
+      {
+        src: "assets/gallery/2nd vs 7th sem Basketball.jpg",
+        alt: "2nd vs 7th sem Basketball Match",
+        caption: "2nd vs 7th sem Basketball Match",
+      },
+      {
+        src: "assets/gallery/Coder Hustle 1.0.jpeg",
+        alt: "Coder Hustle 1.0",
+        caption: "Coder Hustle 1.0",
+      },
+      {
+        src: "assets/gallery/Farewell Program.jpg",
+        alt: "Farewell Program",
+        caption: "Farewell Program",
+      },
+      {
+        src: "assets/gallery/Shivajatha hiking.jpg",
+        alt: "Shiva jatta Hiking",
+        caption: "Shiva jatta Hiking",
+      },
+      {
+        src: "assets/gallery/Youth it mou signing.jpg",
+        alt: "Youth IT MOU Signing",
+        caption: "Youth IT MOU Signing",
+      },
+      {
+        src: "assets/gallery/library program.jpg",
+        alt: "E-library Resources Program",
+        caption: "E-library Resources Program",
+      },
+      {
+        src: "assets/gallery/Danabari hiking.jpg",
+        alt: "Danabari Hiking",
+        caption: "Danabari Hiking",
+      },
+      {
+        src: "assets/gallery/chindra dada hiking.jpg",
+        alt: "Chinde dada Hiking",
+        caption: "Chinde dada Hiking",
+      },
+      {
+        src: "assets/gallery/girls awarness program.jpg",
+        alt: "Women Empowerment Program",
+        caption: "Women Empowerment Program",
+      },
+    ],
+  };
+}
 
 fetch("footer.html")
   .then((response) => response.text())
